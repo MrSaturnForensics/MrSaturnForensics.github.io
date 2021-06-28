@@ -15,6 +15,7 @@
 
 navbar-links:
   About Me: "aboutme"
+  Archive Posts: test
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
 #    - Learn markdown: "https://www.markdowntutorial.com/"
