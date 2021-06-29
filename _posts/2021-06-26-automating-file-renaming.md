@@ -28,3 +28,31 @@ if not working_dir_check_structure == "Case Files":
    tkinter.messagebox.showerror(title="Incorrect Location Selected", message="Error, please ONLY try run in Photographs folder!",)
    quit()
 {% endhighlight %}
+
+I then moved onto building in where the script can pull the details from to build the filenames. In a similar way, I had defined **working_dir** as the path the script is ran from. I then created some variables containing the folder names of the case reference / exhibit reference, finally I then assigned the filename structure using an F string containing the assigned varaibles, which would now be **photograph_filename**.
+
+{% highlight javascript linenos %}
+working_dir = Path.cwd()
+case_ref = working_dir.parents[1].name  
+exhibit_ref = working_dir.parents[0].name 
+
+photograph_filename = f"{case_ref}_{exhibit_ref}"
+{% endhighlight %}
+
+### Building it further
+I then decided to do the brunt of this in a function called **main()**, the idea being that for every file this process would loop over, meaning it can build unique filenames, I set **i = 1** as the initial count, which would increase value by 1 every loop. this would then later be built into **my_dest** for the final filename. I then used **glob** to only obtain **.jpg**, as well as using **natsort,  os_sorted** to structure these files in a "natural" way, i.e the way you would see it in file explorer. This would then be appied to every file present within the directory that is a .jpg - finally this was then all called at the end of the script with the **main()** function. 
+
+{% highlight javascript linenos %}
+def main():
+   i = 1
+   for current_path in os_sorted(working_dir.glob("*.jpg")):
+      # Build full filename
+      my_dest = current_path.with_name(f'{photograph_filename} ({i}).JPG')
+      # Rename all files
+      current_path.rename(my_dest)
+      
+      i += 1
+      
+if __name__ == '__main__':
+   main()
+{% endhighlight %}
