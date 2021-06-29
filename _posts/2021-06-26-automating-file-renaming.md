@@ -55,8 +55,11 @@ if __name__ == '__main__':
 {% endhighlight %}
 
 ### The Result
+As seen below, the script will rename based on the folder names specified!
 <a href="https://ibb.co/PzxYv0Z"><img src="https://i.ibb.co/x8hstdS/before.png" alt="before" border="0" /></a>
 
+As seen below, the script will produce an error if ran outside the specified location!
+<a href="https://ibb.co/gzpgFH2"><img src="https://i.ibb.co/QrRmjzg/error.png" alt="error" border="0" /></a>
 
 ### Final Code
 {% highlight javascript linenos %}
