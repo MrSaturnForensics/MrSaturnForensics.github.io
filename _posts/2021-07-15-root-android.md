@@ -2,7 +2,7 @@
 layout: post
 title: Rooting an Android Device
 cover-img: /assets/img/computer-screen-monitor-text.jpg
-thumbnail-img: /assets/img/files photo.PNG
+thumbnail-img: /assets/img/android.png
 share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
