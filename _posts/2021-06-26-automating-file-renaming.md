@@ -46,9 +46,7 @@ I then decided to do the brunt of this in a function called **main()**, the idea
 def main():
    i = 1
    for current_path in os_sorted(working_dir.glob("*.jpg")):
-      # Build full filename
       my_dest = current_path.with_name(f'{photograph_filename} ({i}).JPG')
-      # Rename all files
       current_path.rename(my_dest)
       
       i += 1
