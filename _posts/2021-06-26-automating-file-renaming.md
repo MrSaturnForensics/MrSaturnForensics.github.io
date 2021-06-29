@@ -20,6 +20,8 @@ I had considered how far this could potentially go, and what requirements would 
 ### The Code
 Initially I tackled the fail-safe aim via the use of a module called **Tkinter**, in this situation, I was looking for a constant between all case files, I had found that 4 directories up was always **Case Files**, so it can be assumed if this is found then the script is being ran at the correct location, and if not it should not run. I had defined the initial directory as the **Path.cwd()** this is just the path in which the script is ran in. I then used **parent.stem** to obtain the folder name 4 directories up.
 
+**_tkinter package (“Tk interface”)_** is the standard Python interface to the Tk GUI toolkit.
+
 {% highlight javascript linenos %}
 working_dir_check = Path.cwd()
 working_dir_check_structure = working_dir_check.parents[3].stem
@@ -28,7 +30,9 @@ if not working_dir_check_structure == "Case Files":
    quit()
 {% endhighlight %}
 
-I then moved onto building in where the script can pull the details from to build the filenames. In a similar way, I had defined **working_dir** as the path the script is ran from. I then created some variables containing the folder names of the case reference / exhibit reference, finally I then assigned the filename structure using an F string containing the assigned varaibles, which would now be **photograph_filename**.
+I then moved onto building in where the script can pull the details from to build the filenames. In a similar way, I had defined **working_dir** as the path the script is ran from. I then created some variables containing the folder names of the case reference / exhibit reference, finally I then assigned the filename structure using an **F String** containing the assigned varaibles, which would now be **photograph_filename**.
+
+**_F-strings_** are string literals that have an f at the beginning and curly braces containing expressions that will be replaced with their values.
 
 {% highlight javascript linenos %}
 working_dir = Path.cwd()
@@ -39,7 +43,10 @@ photograph_filename = f"{case_ref}_{exhibit_ref}"
 {% endhighlight %}
 
 ### Building it further
-I then decided to do the brunt of this in a function called **main()**, the idea being that for every file this process would loop over, meaning it can build unique filenames, I set **i = 1** as the initial count, which would increase value by 1 every loop. this would then later be built into **my_dest** for the final filename. I then used **glob** to only obtain **.jpg**, as well as using **natsort,  os_sorted** to structure these files in a "natural" way, i.e the way you would see it in file explorer. This would then be appied to every file present within the directory that is a .jpg - finally this was then all called at the end of the script with the **main()** function. 
+I then decided to do the brunt of this in a function called **main()**, the idea being that for every file this process would loop over, meaning it can build unique filenames, I set **i = 1** as the initial count, which would increase value by 1 every loop. this would then later be built into **my_dest** for the final filename. I then used **glob** to only obtain **.jpg**, as well as using **natsort,  os_sorted** to structure these files in a "natural" way, i.e the way you would see it in file explorer. This would then be appied to every file present within the directory that is a .jpg - finally this was then all called at the end of the script with the **main()** function.
+
+**_Glob module_** finds all the pathnames matching a specified pattern according to the rules used by the Unix shell.
+**_natsort module - os_sorted_** Sort elements in the same order as your operating system’s file browser.
 
 {% highlight javascript linenos %}
 def main():
