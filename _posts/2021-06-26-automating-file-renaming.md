@@ -55,8 +55,7 @@ if __name__ == '__main__':
 {% endhighlight %}
 
 ### The Result
-
-
+<a href="https://ibb.co/PzxYv0Z"><img src="https://i.ibb.co/x8hstdS/before.png" alt="before" border="0" /></a>
 
 
 ### Final Code
