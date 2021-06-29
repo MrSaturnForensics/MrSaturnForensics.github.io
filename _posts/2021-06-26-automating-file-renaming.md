@@ -56,3 +56,44 @@ def main():
 if __name__ == '__main__':
    main()
 {% endhighlight %}
+
+### The Result
+
+
+
+
+### Final Code
+{% highlight javascript linenos %}
+# Check to make sure 5 directories up is called "Case Files" or do not run.
+working_dir_check = Path.cwd()
+working_dir_check_structure = working_dir_check.parents[3].stem
+if not working_dir_check_structure == "Case Files":
+   tkinter.messagebox.showerror(title="Incorrect Location Selected", message="Error, please ONLY try run in Photographs folder!",)
+   quit()
+
+# Specify that the current folder is the directory to look up from
+working_dir = Path.cwd()
+case_ref = working_dir.parents[1].name  # Case Reference from photo dir
+exhibit_ref = working_dir.parents[0].name # Exhibit Reference from photo dir
+
+# Building Filename data that needs to be pulled
+photograph_filename = f"{case_ref}_{exhibit_ref}"
+
+# Function to rename multiple files
+def main():
+   i = 1
+   # Only change .jpg files / os.sorted keeps file explorer like order
+   for current_path in os_sorted(working_dir.glob("*.jpg")):
+      # Build full filename
+      my_dest = current_path.with_name(f'{photograph_filename} ({i}).JPG')
+      # Rename all files
+      current_path.rename(my_dest)
+
+      # Itterate by 1 for each file present
+      i += 1
+      
+if __name__ == '__main__':
+   
+   # Calling main() function
+   main()
+{% endhighlight %}
