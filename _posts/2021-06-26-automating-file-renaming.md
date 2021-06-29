@@ -14,9 +14,17 @@ As a start to this blog, I intended to make my life slightly easier, via creatin
 
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
-- Rename **all intended** files within the directory in the structure **{case_reference}_{exhibit_reference} (number)**
+- Rename image files within the directory in the structure **'{case_reference}_{exhibit_reference} (number)'**
+- Only rename .JPG files 
 - Add a fail-safe to make sure this can only be ran inside a "Photographs" folder, so it cannot rename files by mistake!
-- Only rename .JPG files (With the idea this can be changed easily)
 
 ### The Code
+Initially I tackled the fail-safe aim via the use of a module called **Tkinter**, in this situation, I was looking for a constant between all case files, I had found that 4 directories up was always **Case Files**, so it can be assumed if this is found then the script is being ran at the correct location, and if not it should not run. I had defined the initial directory as the **Path.cwd()** this is just the path in which the script is ran in. I then used **parent.stem** to obtain the folder name 4 directories up.
 
+{% highlight javascript linenos %}
+working_dir_check = Path.cwd()
+working_dir_check_structure = working_dir_check.parents[3].stem
+if not working_dir_check_structure == "Case Files":
+   tkinter.messagebox.showerror(title="Incorrect Location Selected", message="Error, please ONLY try run in Photographs folder!",)
+   quit()
+{% endhighlight %}
