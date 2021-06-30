@@ -20,3 +20,28 @@ I had considered how far this could potentially go, and what requirements would 
 - Add keywords from existing templates
 - Handle inputs correctly and offer alternatives rather than crashing the program
 - Add a fail-safe to make sure this cannot overwrite existing case files with the same filename / exhibit filename
+
+### The Code
+
+{% highlight javascript linenos %}
+TEMPLATE_FOLDER = r"C:\Template" 
+CASE_DIRECTORIES = {  # 
+    'C': r'C:\Case Files\C',
+    'D': r'C:\Case Files\D',
+    'E': r'C:\Case Files\E',
+    'F': r'C:\Case Files\F',
+    'G': r'C:\Case Files\G',
+    'H': r'C:\Case Files\H',
+    'N': r'C:\Case Files\N',
+    'S': r'C:\Case Files\S',
+    'V': r'C:\Case Files\V',
+    'W': r'C:\Case Files\W',
+}
+EXHIBIT_DIRECTORIES = {
+    'C': r'C:\COMPUTER',  
+    'P': r'K:\PHONE' 
+}
+KEYWORD_LISTS_DIR = Path(
+    r"C:\KEYWORD LISTS" 
+)
+{% endhighlight %}
