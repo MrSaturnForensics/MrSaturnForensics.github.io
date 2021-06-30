@@ -22,10 +22,11 @@ I had considered how far this could potentially go, and what requirements would 
 - Add a fail-safe to make sure this cannot overwrite existing case files with the same filename / exhibit filename
 
 ### The Code
+I started off 
 
 {% highlight javascript linenos %}
 TEMPLATE_FOLDER = r"C:\Template" 
-CASE_DIRECTORIES = {  # 
+CASE_DIRECTORIES = {   
     'C': r'C:\Case Files\C',
     'D': r'C:\Case Files\D',
     'E': r'C:\Case Files\E',
