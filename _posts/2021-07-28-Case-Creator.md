@@ -40,7 +40,7 @@ CASE_DIRECTORIES = {
 }
 EXHIBIT_DIRECTORIES = {
     'C': r'C:\COMPUTER',  
-    'P': r'K:\PHONE' 
+    'P': r'C:\PHONE' 
 }
 KEYWORD_LISTS_DIR = Path(
     r"C:\KEYWORD LISTS" 
