@@ -80,15 +80,9 @@ def ask_for_keyword_files():
     while True:
         print("0) No Keyword List Required")
         
-        print("1) Adult Sexual Assault")
-        print("2) Darknet")
-        print("3) Drugs")
-        print("4) Extreme Pornography")
-        print("5) Fraud")
-        print("6) Grooming")
-        print("8) Misper - Suicide")
-        print("9) Violence - Weapons")
-        print("10) Voyeurism")
+        print("1) Cats")
+        print("2) Dogs")
+        print("3) Birds")
         keyword_answer = input('> ')
         selections_strings = keyword_answer.split(',')
 
@@ -112,7 +106,6 @@ def ask_for_keyword_files():
 
             # Test that the integer points to a file:
             if not (1 <= integer <= len(keyword_list_files)):
-                # Given integer didn't point to a file
                 print(f"This keyword list does not exist, \"{integer}\" Please only select from the list shown!")
                 print()
                 break  # Back to start
