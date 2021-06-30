@@ -22,7 +22,7 @@ I had considered how far this could potentially go, and what requirements would 
 - Add a fail-safe to make sure this cannot overwrite existing case files with the same filename / exhibit filename
 
 ### The Code
-I started off 
+I started off by tackling some of the directories for templates and location of cases. **TEMPLATE_FOLDER** represents anything which should be copied into the root of the case folder, such as a template keyword file. **CASE_DIRECTORIES** represents any location of which the case folder can be saved to, and the input defined at the start is linked to the directory. **KEYWORD_LISTS_DIR** represents the file path to the folder containing all of the template keyword files.
 
 {% highlight javascript linenos %}
 TEMPLATE_FOLDER = r"C:\Template" 
