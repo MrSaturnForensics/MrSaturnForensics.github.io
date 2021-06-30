@@ -2,7 +2,7 @@
 layout: post
 title: Case Creation Script
 cover-img: /assets/img/computer-screen-monitor-text.jpg
-thumbnail-img: /assets/img/files photo.PNG
+thumbnail-img: /assets/img/Folder.PNG
 share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
