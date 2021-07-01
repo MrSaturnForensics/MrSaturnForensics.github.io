@@ -248,7 +248,7 @@ def ask_exhibit_type():
             # Goes back to start of the loop
 {% endhighlight %}
 
-### Exhibit Name & Amount
+### Exhibit Name & Multiple Exhibits
 Test
 {% highlight javascript linenos %}
 def ask_one_exhibit():
