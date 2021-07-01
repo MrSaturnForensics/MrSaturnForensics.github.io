@@ -158,14 +158,13 @@ Finally this returns a variable which contains all of the keywords selected by t
 
 
 ### Safe Inputs
+This function was necessary to allow any input that contains data that cannot be accepted as part of a filename to be highlighted to the user, suggesting an alternative input, and giving them the option to accept it, any invalid character will be replace with "-". I found this information helpful to guide me with this. https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
 
 {% highlight javascript linenos %}
 def safe_filename(text, replace_with='-'):
     """
     Replaces invalid characters in given text and returns the escaped text
     and used invalid characters as a tuple.
-
-    Reference: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
     """
     invalid = [
         *r'< > : " / \ | ? *',
