@@ -153,6 +153,8 @@ Finally this returns a variable which contains all of the keywords selected by t
     return concatenated_output
  {% endhighlight %}
 
+
+
 ### Safe Inputs
 
 {% highlight javascript linenos %}
