@@ -19,7 +19,7 @@ I had considered how far this could potentially go, and what requirements would 
 - Option to add more than one exhibit per run.
 - Add keywords from existing templates
 - Handle inputs correctly and offer alternatives rather than crashing the program
-- Add a fail-safe to make sure this cannot overwrite existing case files with the same filename / exhibit filename
+- Add a fail-safe to make sure this cannot overwrite existing case files with the same filename or exhibit filename
 
 ### The Code
 
