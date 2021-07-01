@@ -22,6 +22,8 @@ I had considered how far this could potentially go, and what requirements would 
 - Add a fail-safe to make sure this cannot overwrite existing case files with the same filename / exhibit filename
 
 ### The Code
+
+### Template Files & Locations
 I started off by tackling some of the directories for templates and location of cases. 
 
 **TEMPLATE_FOLDER** represents anything which should be copied into the root of the case folder, such as an empty template keyword txt file for use later. 
@@ -57,7 +59,8 @@ The rest of the code I have included with Functions which I then plan on buildin
 
 **_Function_** is a block of code which only runs when it's called.
 
-I started with the section which would deal with the keywords for the case folder, I initially used a sorted glob searching for any file within **keyword_list_files**  that is a **.txt**. Following this, I added a **len** check, which checks the amount of files found in **keyword_list_files**, if this returns 0 this means no keyword files have been found, which will terminate the program and provide an error.
+### Keyword Selection
+This section which would deal with the keywords for the case folder, I initially used a sorted glob searching for any file within **keyword_list_files**  that is a **.txt**. Following this, I added a **len** check, which checks the amount of files found in **keyword_list_files**, if this returns 0 this means no keyword files have been found, which will terminate the program and provide an error.
 
 **_Glob module_** finds all the pathnames matching a specified pattern according to the rules used by the Unix shell.
 
@@ -75,7 +78,7 @@ def ask_for_keyword_files():
         sys.exit()
 {% endhighlight %}
 
-After this I print instructions on the screen of how to select which keyword file is present, as well as hard coding the names of the txt files, making it easier for the user to see which value represents which keyword file, they are then instructed to input the numbers representing each keyword file they need, this input allows for single or multiple files to be included. The input from this is then stripped of any spaces, and tested to see if it's an integer. If this fails then it loops for the user to input again and displays an error message, if all is as it should be, it will then also verify if the input matches the amount of files found within the keyword folder, and will only allow an input that is present. Then it creates a variable which contains all of the keywords selected by the user, which will be used later to append to the empty keyword file. 
+After this I used **print** to provide text instructions on the screen of how to select which keyword file is present, as well as hard coding the names of the txt files, making it easier for the user to see which value represents which keyword file. The user is then instructed to input the numbers representing each keyword file they need, this input allows for single or multiple keyword files to be included. The input is then striped of **,** to allow for multiple files to be read.
 
 {% highlight javascript linenos %}
     # Print a list of files to the user to select from
@@ -93,6 +96,16 @@ After this I print instructions on the screen of how to select which keyword fil
         print("3) Birds")
         keyword_answer = input('> ')
         selections_strings = keyword_answer.split(',')
+{% endhighlight %}
+
+
+
+
+
+The input from this is then stripped of any spaces, and tested to see if it's an integer. If this fails then it loops for the user to input again and displays an error message, if all is as it should be, it will then also verify if the input matches the amount of files found within the keyword folder, and will only allow an input that is present. Then it creates a variable which contains all of the keywords selected by the user, which will be used later to append to the empty keyword file. 
+
+{% highlight javascript linenos %}
+
 
         # Try to convert input list to python integers:
         selections = []
