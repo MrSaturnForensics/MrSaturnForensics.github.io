@@ -60,7 +60,9 @@ The rest of the code I have included with Functions which I then plan on buildin
 **_Function_** is a block of code which only runs when it's called.
 
 ### Keyword Selection
-This section which would deal with the keywords for the case folder, I initially used a sorted glob searching for any file within **KEYWORD_LISTS_DIR** that is a **.txt**, this is then placed into a new variable **keyword_list_files** Following this, I added a **len** check, which checks the amount of files found in **keyword_list_files**, if this returns 0 this means no keyword files have been found, which will terminate the program and provide an error.
+This section which would deal with the keywords for the case folder, I initially used a sorted glob search for any file within **KEYWORD_LISTS_DIR** that is a **.txt**, this is then placed into a new variable **keyword_list_files**. 
+
+Following this, I added a **len** check, which checks the amount of files found in **keyword_list_files**, if this returns 0 this means no keyword files have been found, which will terminate the program and provide an error.
 
 **_Glob module_** finds all the pathnames matching a specified pattern according to the rules used by the Unix shell.
 
