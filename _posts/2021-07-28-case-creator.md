@@ -237,9 +237,6 @@ def ask_exhibit_type():
     """
     while True:
         case_structure = input("Press 'C' for Computer / 'P' for Phone, then press ENTER: ").upper()
-
-        # If user inputs something that isn't defined in `exhibit_directories`
-        # then `exhibit_directory` becomes False like defined below.
         exhibit_directory = EXHIBIT_DIRECTORIES.get(case_structure, False)
 
         # If the `exhibit_directory` is defined, return the path.
