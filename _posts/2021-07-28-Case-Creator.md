@@ -130,8 +130,8 @@ def ask_for_keyword_files():
         concatenated_output += selected_file_content + '\n'
 
     return concatenated_output
-    
-{% endhighlight %}
+
+{% highlight javascript linenos %}
 def safe_filename(text, replace_with='-'):
     """
     Replaces invalid characters in given text and returns the escaped text
