@@ -185,6 +185,47 @@ def safe_filename(text, replace_with='-'):
 {% endhighlight %}
 
 
+### Case Location Selection
+This function will display all of the values defined previously in **CASE_DIRECTORIES**, and will allow an input that matches any that exist in either uppercase or lowercase, if an incorrect input is given, it will keep looping and asking. 
+
+{% highlight javascript linenos %}
+def ask_case_type():
+    """Ask the user for what letter case for directory purposes."""
+    # List of defined case directories in the constant `CASE_DIRECTORIES`
+    case_types = CASE_DIRECTORIES.keys()
+
+    print("Type one of the casetypes below and press ENTER.")
+    while True:
+        # Display all case letters to user
+        print(' / '.join(case_types))
+
+        # Ask for case type and return it if its a case type listed in `case_types` list.
+        case_type = input()
+        if case_type.upper() in case_types:
+            return case_type.upper()
+        else:
+            print("Invalid input, please select again")
+{% endhighlight %}
+
+### Case Reference
+This function will ask the user to input the case reference for the filename of the root folder. This makes use of the previously defined **safe_filename** function, and will convert any invalid filename into an alternative or allow the user to retry.
+
+{% highlight javascript linenos %}
+def ask_case_reference():
+    """Ask the user for full case reference and change values to work in a filename"""
+    while True:
+        case_filename = input("Please type case reference such as 'A-123-99-DF' and press ENTER: ")
+        escaped, invalids = safe_filename(case_filename)
+
+        if invalids:
+            print(f"The input contains the following invalid names: {invalids}")
+            print(f'Your input was converted to -> "{escaped}"')
+            ans = input("Do you accept the above as the case reference? [Y/N] ")
+            if ans not in 'yY\n':
+                continue
+        return escaped
+{% endhighlight %}
+
 ### Final Code
 ~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
