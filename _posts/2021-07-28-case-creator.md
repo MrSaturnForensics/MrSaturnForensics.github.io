@@ -226,6 +226,54 @@ def ask_case_reference():
         return escaped
 {% endhighlight %}
 
+### Exhibit Type Selection
+This section will ask the user for an input based on the values present in **case_structure**, both containing filepaths to the different directory structures for a phone or computer. The user will input either 'P' or 'C' to select for an exhibit.
+
+{% highlight javascript linenos %}
+def ask_exhibit_type():
+    """
+    Ask the user for what letter case for directory structure to be copied.
+    :returns 'C' for Computer,'P' for Phone.
+    """
+    while True:
+        case_structure = input("Press 'C' for Computer / 'P' for Phone, then press ENTER: ").upper()
+
+        # If user inputs something that isn't defined in `exhibit_directories`
+        # then `exhibit_directory` becomes False like defined below.
+        exhibit_directory = EXHIBIT_DIRECTORIES.get(case_structure, False)
+
+        # If the `exhibit_directory` is defined, return the path.
+        # Otherwise ask for valid input again.
+        if exhibit_directory:
+            return exhibit_directory
+        else:
+            print("Invalid input, please select again")
+            # Goes back to start of the loop
+{% endhighlight %}
+
+### Exhibit Name & Amount
+Test
+{% highlight javascript linenos %}
+def ask_one_exhibit():
+    while True:
+        exhibit = input("Please type exhibit reference and press ENTER: ")
+
+        # safe_filename returns the escaped filename and the invalid
+        # characters used in the original:
+        escaped_exhibit, invalids = safe_filename(exhibit)
+
+        # If the user gives an invalid character, ask whether to keep the escaped
+        # one or to ask for it again.
+        if invalids:
+            print(f"The input contains the following invalid names: {invalids}")
+            print(f'Your input was converted to -> "{escaped_exhibit}"')
+            ans = input("Do you accept the above as an exhibit? [Y/N] ")
+            if ans not in 'yY\n':
+                continue
+
+        return escaped_exhibit
+{% endhighlight %}
+
 ### Final Code
 ~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
