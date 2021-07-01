@@ -227,7 +227,7 @@ def ask_case_reference():
 {% endhighlight %}
 
 ### Exhibit Type Selection
-This section will ask the user for an input based on the values present in **case_structure**, both containing filepaths to the different directory structures for a phone or computer. The user will input either 'P' or 'C' to select for an exhibit.
+This section will ask the user for an input based on the values present in **case_structure**, both containing filepaths to the different directory structures for a phone or computer. The user will input either 'P' or 'C' to select which directory structure is required for an exhibit.
 
 {% highlight javascript linenos %}
 def ask_exhibit_type():
