@@ -186,7 +186,7 @@ def safe_filename(text, replace_with='-'):
 
 
 ### Final Code
-{% highlight javascript linenos %}
+~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
 CASE_DIRECTORIES = {  # CHANGE ME AS NEEDED
     'C': r'K:\Case Files\C',
@@ -464,4 +464,4 @@ def main():
         if ans_add_more not in 'yY\n':
             break
 main()
-{% endhighlight %}
+~~~
