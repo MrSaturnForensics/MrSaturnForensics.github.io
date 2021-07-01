@@ -130,4 +130,28 @@ def ask_for_keyword_files():
         concatenated_output += selected_file_content + '\n'
 
     return concatenated_output
+    
+{% endhighlight %}
+def safe_filename(text, replace_with='-'):
+    """
+    Replaces invalid characters in given text and returns the escaped text
+    and used invalid characters as a tuple.
+
+    Reference: https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
+    """
+    invalid = [
+        *r'< > : " / \ | ? *',
+        *r'CON PRN AUX NUL COM1 COM2 COM3 COM4 COM5 COM6 COM7 COM8 COM9 LPT1 LPT2 LPT3 LPT4 LPT5 '
+         r'LPT6 LPT7 LPT8 LPT9'.split(),
+        # Characters whose integer representations are in the range from 1 through 31 are not
+        # allowed.
+        *[chr(n) for n in range(0, 32)]
+    ]
+
+    invalids = []
+    for char in invalid:
+        if char in text:
+            text = text.replace(char, replace_with)
+            invalids.append(char)
+    return text.strip(), invalids
 {% endhighlight %}
