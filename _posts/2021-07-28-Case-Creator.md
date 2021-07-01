@@ -104,15 +104,11 @@ The user is then instructed to input the numbers representing each keyword file 
         selections_strings = keyword_answer.split(',')
 {% endhighlight %}
 
+The input from this is then stripped of any spaces, and tested to see if it's an integer. If this fails then it loops for the user to input again and displays an error message.
 
-
-
-
-The input from this is then stripped of any spaces, and tested to see if it's an integer. If this fails then it loops for the user to input again and displays an error message, if all is as it should be, it will then also verify if the input matches the amount of files found within the keyword folder, and will only allow an input that is present. Then it creates a variable which contains all of the keywords selected by the user, which will be used later to append to the empty keyword file. 
-
+After this it will then also verify if the input matches the amount of files found within the keyword folder, and will only allow an input integer that is equal or less.
+I also added in the functionality to not include any keywords, of which the user can skip with "0".
 {% highlight javascript linenos %}
-
-
         # Try to convert input list to python integers:
         selections = []
         for string in selections_strings:
@@ -142,7 +138,11 @@ The input from this is then stripped of any spaces, and tested to see if it's an
         else:
             # Whole input list was processed successfully!
             break
+{% endhighlight %}
 
+Finally this returns a variable which contains all of the keywords selected by the user, which will be used later to append to the empty keyword file. 
+
+{% highlight javascript linenos %}
     # Create a variable that will contain all the keyword files selected
     concatenated_output = ''
     for selection_int in selections:
@@ -152,6 +152,8 @@ The input from this is then stripped of any spaces, and tested to see if it's an
 
     return concatenated_output
  {% endhighlight %}
+
+### Safe Inputs
 
 {% highlight javascript linenos %}
 def safe_filename(text, replace_with='-'):
