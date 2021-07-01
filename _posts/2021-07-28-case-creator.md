@@ -208,7 +208,7 @@ def ask_case_type():
 {% endhighlight %}
 
 ### Case Reference
-This function will ask the user to input the case reference for the filename of the root folder. This makes use of the previously defined **safe_filename** function, and will convert any invalid filename into an alternative or allow the user to retry.
+This function will ask the user to input the case reference for the filename of the root folder. This makes use of the previously defined **safe_filename** function, and will convert any invalid filename into an alternative or allow the user to re-enter an input.
 
 {% highlight javascript linenos %}
 def ask_case_reference():
