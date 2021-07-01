@@ -53,28 +53,33 @@ KEYWORD_LISTS_DIR = Path(
 )
 {% endhighlight %}
 
+The rest of the code I have included with Functions which I then plan on building into a final main() function. 
+I started with the section which would deal with the keywords for the case folder, I initially used a sorted glob searching for any file within the specified keyword file that is a **.txt**. Following this, I added a **len** check, which checks the amount of files found in **keyword_list_files**, if this returns 0 this means no keyword files have been found, which will terminate the program and provide an error.
+
+After this I print instructions on the screen of how to select which keyword file is present, as well as hard coding the names of the txt files, making it easier for the user to see which value represents which keyword file, the input from this is then stripped of any spaces, and tested to see if it's an integer. If this fails then it loops for the user to input again and displays an error message, it will also verify if the input matches the amount of files found within the keyword folder, and will only allow an input that is present. Then it creates a variable which contains all of the keywords selected by the user, which will be used later to append to the empty keyword file. 
+
+**_Function_** is a block of code which only runs when it's called.
+
+**_Glob module_** finds all the pathnames matching a specified pattern according to the rules used by the Unix shell.
+
+**_len()_** function returns the number of items in an object.
 
 {% highlight javascript linenos %}
 def ask_for_keyword_files():
     """Returns a string that has all the contents of the files that the user selected."""
     # List of all txt files present within directory
     keyword_list_files = sorted(KEYWORD_LISTS_DIR.glob(r'*.txt'))
-
-    # Notify if no files
+    
     if len(keyword_list_files) == 0:
         print(f"Couldn't find keyword list files: \"{KEYWORD_LISTS_DIR}\"")
         input('Press enter to exit.')
         sys.exit()
 
     # Print a list of files to the user to select from
-    # Also preview their content a little bit?
     print("Please select one or more keyword lists for examination by\n"
           "giving one or more numbers from the list below.\n"
           'Examples: "1,2,3" or "5"')
     print()
-
-    for file_index in range(len(keyword_list_files)):
-        preview = keyword_list_files[file_index].read_text()[:45]
 
     # Get the index of the file the user wants to use
     while True:
