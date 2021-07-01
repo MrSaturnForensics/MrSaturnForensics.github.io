@@ -84,7 +84,7 @@ After this I used **print** to provide text instructions on the screen of how to
 
 **_print()_** function prints the specified message to the screen.
 
-The user is then instructed to input the numbers representing each keyword file they need, this input allows for single or multiple keyword files to be included. The input is then striped of **,** to allow for multiple files to be read.
+The user is then instructed to input the numbers representing each keyword file they need, this input allows for single or multiple keyword files to be included. The input is then striped of '**,**' to allow for multiple files to be read.
 
 {% highlight javascript linenos %}
     # Print a list of files to the user to select from
