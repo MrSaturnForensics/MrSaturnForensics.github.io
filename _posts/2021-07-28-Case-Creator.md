@@ -32,6 +32,8 @@ I started off by tackling some of the directories for templates and location of 
 
 **KEYWORD_LISTS_DIR** represents the file path to the folder containing all of the template keyword files.
 
+The **r'** means that the string is to be treated as a raw string, which means all escape codes will be ignored.
+
 {% highlight javascript linenos %}
 TEMPLATE_FOLDER = r"C:\Template" 
 CASE_DIRECTORIES = {   
