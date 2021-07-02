@@ -375,6 +375,17 @@ main()
 Below is the template folders and files present inside them.
 <a href="https://ibb.co/cQJrxJF"><img src="https://i.ibb.co/7Kv1bvW/BIG-SCREEN.png" alt="BIG-SCREEN" border="0" /></a>
 
+The following is an example of what is present inside **cat.txt** & **dog.txt**. These would represent keywords for a case.
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/XV7tWN9/Capture.png" alt="Capture" border="0" /></a>
+
+This is an example of the script being ran with inputs showcasing some of the features.
+<a href="https://ibb.co/Jzsb8Cv"><img src="https://i.ibb.co/LCZqBvx/TEST.png" alt="TEST" border="0" /></a>
+
+The following is then the case folder created by the script, as you can see it filled in template case with the user's inputs
+as well as the contents of both **cat.txt** and **dog.txt** being combined into the case's and being copied into a **.csv** file too.
+<a href="https://ibb.co/xMR54BK"><img src="https://i.ibb.co/MR3NXty/jiiji.png" alt="jiiji" border="0" /></a>
+
+
 ### Final Code
 ~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
