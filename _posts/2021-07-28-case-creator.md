@@ -248,7 +248,7 @@ def ask_exhibit_type():
             # Goes back to start of the loop
 {% endhighlight %}
 
-### Exhibit Name & Adding more Exhibits
+### Exhibit Name & Adding More Exhibits
 This function allows the user to provide the filename for the exhibit, which will rename the root exhibit folder and a few template files present within it, This makes use of the previously defined **safe_filename** function, and will convert any invalid filename into an alternative or allow the user to re-enter an input.
 
 {% highlight javascript linenos %}
