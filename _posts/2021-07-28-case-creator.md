@@ -388,25 +388,18 @@ as well as the contents of both **cat.txt** and **dog.txt** being combined into 
 
 ### Final Code
 ~~~
-TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
-CASE_DIRECTORIES = {  # CHANGE ME AS NEEDED
-    'C': r'K:\Case Files\C',
-    'D': r'K:\Case Files\D',
-    'E': r'K:\Case Files\E',
-    'F': r'K:\Case Files\F',
-    'G': r'K:\Case Files\G',
-    'H': r'K:\Case Files\H',
-    'N': r'K:\Case Files\N',
-    'S': r'K:\Case Files\S',
-    'V': r'K:\Case Files\V',
-    'W': r'K:\Case Files\W',
+TEMPLATE_FOLDER = r"C:\Users\HTCU\Documents\Template Case Data"
+CASE_DIRECTORIES = {  
+    'C': r'C:\Users\HTCU\Documents\Case Files\C',
+    'D': r'C:\Users\HTCU\Documents\Case Files\D',
+    'E': r'C:\Users\HTCU\Documents\Case Files\E',
 }
 EXHIBIT_DIRECTORIES = {
-    'C': r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\COMPUTER',  # CHANGE ME AS NEEDED
-    'P': r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE' # CHANGE ME AS NEEDED
+    'C': r'C:\Users\HTCU\Documents\COMPUTER', 
+    'P': r'C:\Users\HTCU\Documents\PHONE' 
 }
 KEYWORD_LISTS_DIR = Path(
-    r"K:\#ISO SOFTWARE APPROVED#\#KEYWORD LISTS" # CHANGE ME AS NEEDED
+    r"C:\Users\HTCU\Documents\Keywords" 
 )
 
 
@@ -435,10 +428,10 @@ def ask_for_keyword_files():
     while True:
         print("0) No Keyword List Required")
         
-        print("1) Cats")
-        print("2) Dogs")
-        print("3) Birds")
-        
+        print("1) Birds")
+        print("2) Cats")
+        print("3) Dogs")
+
         keyword_answer = input('> ')
         selections_strings = keyword_answer.split(',')
 
@@ -647,7 +640,7 @@ def main():
         # Rename exhibit files & dirs using its specific case ref and exhibit ref names
         exhibit_dir_path.joinpath('.Case_Ref_Exhibit_Ref_Reports').rename(
             exhibit_dir_path / f".{case_reference}_{exhibit_name}_Reports")
-        if exhibit_template_dir == r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE': 
+        if exhibit_template_dir == r'C:\Users\HTCU\Documents\PHONE': # CHANGE ME AS NEEDED
             exhibit_image_path.joinpath('Exhibit_Ref_M1').rename(
                 exhibit_image_path / f"{exhibit_name}_M1")
             exhibit_sim_path.joinpath('Exhibit_Ref_S1').rename(
@@ -664,4 +657,5 @@ def main():
         if ans_add_more not in 'yY\n':
             break
 main()
+
 ~~~
