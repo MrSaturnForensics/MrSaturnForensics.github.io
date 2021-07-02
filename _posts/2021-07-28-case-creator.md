@@ -279,6 +279,12 @@ I used **.is_dir()** to ensure that if the case folder is already exisiting the 
 
 Following this I used the **distutils.dir_util - copy tree** which copied the files from the source template file path to the root of the case folder. 
 
+**_distutils.dir_util_** is a utility function for manipulating directories and directory trees.
+
+Then the keyword template txt present in the root folder is renamed using an **F-String** with the user's inputs, and the selected contents of the keyword template files is copied into this txt. 
+
+**_F-strings_** are string literals that have an f at the beginning and curly braces containing expressions that will be replaced with their values.
+
 {% highlight javascript linenos %}
 def main():
     """Based on what the user selects for "get_case_type" assign value
