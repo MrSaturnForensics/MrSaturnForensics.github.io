@@ -249,15 +249,8 @@ def ask_exhibit_type():
 {% endhighlight %}
 
 ### Exhibit Name & Adding more Exhibits
-Test
-{% highlight javascript linenos %}
-def ask_one_exhibit():
-    while True:
-        exhibit = input("Please type exhibit reference and press ENTER: ")
+This function allows the user to provide a name for the exhibit, which will rename the root exhibit folder / a few template files present within it, This makes use of the previously defined **safe_filename** function, and will convert any invalid filename into an alternative or allow the user to re-enter an input.
 
-        # safe_filename returns the escaped filename and the invalid
-        # characters used in the original:
-        escaped_exhibit, invalids = safe_filename(exhibit)
 
         # If the user gives an invalid character, ask whether to keep the escaped
         # one or to ask for it again.
