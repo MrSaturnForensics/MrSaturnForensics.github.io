@@ -372,7 +372,7 @@ main()
 {% endhighlight %}
 
 ### The Result
-Below is the template folders / data present inside them.
+Below is the template folders and files present inside them.
 <a href="https://ibb.co/cQJrxJF"><img src="https://i.ibb.co/7Kv1bvW/BIG-SCREEN.png" alt="BIG-SCREEN" border="0" /></a>
 
 ### Final Code
