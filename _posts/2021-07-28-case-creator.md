@@ -273,7 +273,12 @@ def ask_one_exhibit():
 {% endhighlight %}
 
 ### Main Function
-Test
+This is where all the functions would be pulled and implemented. I initally called all of them under some variables to use in **main()**.
+
+I used **.is_dir()** to ensure that if the case folder is already exisiting the process would be halted so no overwriting could occur, this will prompt the user and close the script. 
+
+Following this I used the **distutils.dir_util - copy tree** which copied the files from the source template file path to the root of the case folder. 
+
 {% highlight javascript linenos %}
 def main():
     """Based on what the user selects for "get_case_type" assign value
