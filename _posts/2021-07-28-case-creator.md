@@ -376,6 +376,8 @@ Below is the template folders and files present inside them.
 <a href="https://ibb.co/cQJrxJF"><img src="https://i.ibb.co/7Kv1bvW/BIG-SCREEN.png" alt="BIG-SCREEN" border="0" /></a>
 
 The following is an example of what is present inside **cat.txt** & **dog.txt** these files would represent keywords for a case.
+
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/XV7tWN9/Capture.png" alt="Capture" border="0" /></a>
 
 This is an example of the script being ran with inputs showcasing some of the features.
