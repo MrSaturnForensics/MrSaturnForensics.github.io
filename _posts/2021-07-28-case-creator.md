@@ -272,6 +272,95 @@ def ask_one_exhibit():
         return escaped_exhibit
 {% endhighlight %}
 
+### Main Function
+Test
+{% highlight javascript linenos %}
+def main():
+    """Based on what the user selects for "get_case_type" assign value
+       to variable case_directory, then append the filename given as the directory to make"""
+    # Calling other function variables created to be used here
+    case_type = ask_case_type()  # 'C/'
+    case_dir = CASE_DIRECTORIES[case_type]  # 'F:/C'
+    case_reference = ask_case_reference()  # 'C-123-20-DF'
+    case_ref_dir = Path(case_dir) / case_reference  # 'F:/C/C-123-20-DF/'
+
+    if case_ref_dir.is_dir():
+        input('This case folder already exists, please re-run the script and '
+              'check case reference is accurate.\nPress ENTER to close.'
+              'If you are trying to create another exhibit, please run script in case folder')
+        print('>')
+        sys.exit()
+
+    print(f"Creating Case Directory \"{case_ref_dir}\"")
+    # Copy subdirectory from template to main case folder.
+    # `copy_tree` creates all directories for dst.
+    copy_tree(src=str(TEMPLATE_FOLDER), dst=str(case_ref_dir))
+
+    keyword_file = case_ref_dir.joinpath('Case_Ref_Keywords.txt').rename(
+        case_ref_dir / f"{case_reference}_Keywords.txt")
+    keyword_file_content = ask_for_keyword_files()
+    keyword_file.write_text(keyword_file_content)
+
+    # Copy the keyword file into a CSV file
+    shutil.copy(case_ref_dir / f"{case_reference}_Keywords.txt", case_ref_dir / f"{case_reference}_Keywords.csv")
+
+    # Add ".CASE REF_SFR" Folder
+    SFR_Folder = case_ref_dir / f".{case_reference}_SFR"
+    SFR_Folder.mkdir(parents=True, exist_ok=False)
+    print(f"Case Directory created succesfully: \"{case_ref_dir}\".")
+
+    # Loop in which user adds exhibits
+    while True:
+        exhibit_name = ask_one_exhibit()
+        # 'CM-01'
+
+        exhibit_dir_path = case_ref_dir / exhibit_name
+        # 'F:/C/C-123-20-DF/CM-01'
+
+        exhibit_template_dir = ask_exhibit_type()
+        # 'E:\HTML & CSV output\HTML & CSV output\Computer'
+
+        # Phone
+        exhibit_image_path = case_ref_dir / exhibit_name / "Memory Card" / "Image Files"
+        # 'F:\C\C-123-20-DF\CM-01\Memory Card\Image Files\CM-01_M1'
+
+        exhibit_sim_path = case_ref_dir / exhibit_name / "SIM"
+        # 'F:\C\C-123-20-DF\CM-01\SIM\Exhibit_Ref_S1'
+
+        # Computer
+        exhibit_pc_image_path = case_ref_dir / exhibit_name / "Image Files"
+        # 'F:\C\C-123-20-DF\CM-01\Memory Card\Image Files\CM-01_M1'
+
+        if exhibit_dir_path.is_dir():
+            print('This exhibit exists already. Please re-enter a different exhibit reference.')
+            continue    # Back to start of loop
+
+        print("Creating Exhibit directory...")
+        copy_tree(src=str(exhibit_template_dir), dst=str(exhibit_dir_path))
+
+        # Rename exhibit files & dirs using its specific case ref and exhibit ref names
+        exhibit_dir_path.joinpath('.Case_Ref_Exhibit_Ref_Reports').rename(
+            exhibit_dir_path / f".{case_reference}_{exhibit_name}_Reports")
+        # Todo: "K:\CASE TEMPLATES\PHONE" shouldn't maybe be hardcoded
+        if exhibit_template_dir == r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE': # CHANGE ME AS NEEDED
+            exhibit_image_path.joinpath('Exhibit_Ref_M1').rename(
+                exhibit_image_path / f"{exhibit_name}_M1")
+            exhibit_sim_path.joinpath('Exhibit_Ref_S1').rename(
+                exhibit_sim_path / f"{exhibit_name}_S1")
+        else:
+            exhibit_pc_image_path.joinpath('Exhibit_Ref_H1',).rename(
+                exhibit_pc_image_path / f"{exhibit_name}_H1")
+            exhibit_pc_image_path.joinpath('Exhibit_Ref_H2',).rename(
+                exhibit_pc_image_path / f"{exhibit_name}_H2")
+            exhibit_pc_image_path.joinpath('Exhibit_Ref_U1',).rename(
+                exhibit_pc_image_path / f"{exhibit_name}_U1")
+
+        ans_add_more = input("Do you want to add another exhibit? [Y/N] ")
+        if ans_add_more not in 'yY\n':
+            break
+main()
+{% endhighlight %}
+
 ### Final Code
 ~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
