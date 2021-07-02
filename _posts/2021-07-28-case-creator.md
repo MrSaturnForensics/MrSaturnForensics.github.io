@@ -341,7 +341,6 @@ def main():
         # Rename exhibit files & dirs using its specific case ref and exhibit ref names
         exhibit_dir_path.joinpath('.Case_Ref_Exhibit_Ref_Reports').rename(
             exhibit_dir_path / f".{case_reference}_{exhibit_name}_Reports")
-        # Todo: "K:\CASE TEMPLATES\PHONE" shouldn't maybe be hardcoded
         if exhibit_template_dir == r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE': # CHANGE ME AS NEEDED
             exhibit_image_path.joinpath('Exhibit_Ref_M1').rename(
                 exhibit_image_path / f"{exhibit_name}_M1")
@@ -622,7 +621,7 @@ def main():
         # Rename exhibit files & dirs using its specific case ref and exhibit ref names
         exhibit_dir_path.joinpath('.Case_Ref_Exhibit_Ref_Reports').rename(
             exhibit_dir_path / f".{case_reference}_{exhibit_name}_Reports")
-        if exhibit_template_dir == r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE': # CHANGE ME AS NEEDED
+        if exhibit_template_dir == r'K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\PHONE': 
             exhibit_image_path.joinpath('Exhibit_Ref_M1').rename(
                 exhibit_image_path / f"{exhibit_name}_M1")
             exhibit_sim_path.joinpath('Exhibit_Ref_S1').rename(
