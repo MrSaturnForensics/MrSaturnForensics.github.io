@@ -371,6 +371,9 @@ def main():
 main()
 {% endhighlight %}
 
+### The Result
+Below is the template data I have included.
+
 ### Final Code
 ~~~
 TEMPLATE_FOLDER = r"K:\#ISO SOFTWARE APPROVED#\#CASE TEMPLATES (DO NOT EDIT)\CASE FOLDER" #CHANGE ME AS NEEDED
