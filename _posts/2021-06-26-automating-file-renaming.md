@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Automating Repetition - File Renaming
+title: File Renaming Script
 cover-img: /assets/img/computer-screen-monitor-text.jpg
-thumbnail-img: /assets/img/files photo.PNG
+thumbnail-img: /assets/img/python.png
 share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
