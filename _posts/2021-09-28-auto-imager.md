@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Automating Imaging Script
+title: Automatic Imaging Script
 subtitle: Using FTKImager and Tableau Imager
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/ftk.png
