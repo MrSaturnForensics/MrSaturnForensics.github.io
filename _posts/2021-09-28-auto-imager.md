@@ -8,7 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
 
-Some of the work we carry out within Digital Forensics is often repetitive, one of the every day tasks is renaming photographs taken of an exhibit as it's recieved, signed and triaged.
+Inital text
 
 As a start to this blog, I intended to make my life slightly easier, via creating a simple Python script which would allow the renaming of files based on the parent directories present within a folder structure. In laymans terms, case structures tend to include both the case reference and exhibit reference, with the Photographs being included within this folder chain. Based on this I can assume a structure for a a filename of a photograph, and create a script which can fill in this information. 
 
