@@ -10,6 +10,6 @@ I'm Chris, a digital forensic investigator who works for law enforcement within 
 I have worked in digital forensics for 3+ years, both within the public and private sector. I'm interested in exploring what is possible to achieve with R & D capabilities with programming, password cracking and reverse engineering.
 
 
-### Contact me
+### Contact Me
 
-Feel free to reach out to me via email with any queries at [mrsaturnforensics@protonmail.com](mrsaturnforensics@protonmail.com) or through any of the social media links at the bottom of the page.
+Feel free to reach out to me via email with any queries at [mrsaturnforensics@protonmail.com](mrsaturnforensics@protonmail.com).
