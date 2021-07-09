@@ -18,7 +18,7 @@ This could then be used in conjunction with another script I plan on creating wh
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
 - Log all files within directories from the location of the script
 - Pull Filename, Last Accessed Time and Directory Path
-- Present this information in a **.xlsx** file.
+- Present this information in a **.xlsx** file
 
 
 ### The Code
