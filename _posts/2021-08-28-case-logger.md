@@ -14,7 +14,9 @@ My intention with this script was to create a way of verifying if a case has bee
 
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
-- Select where the case file is saved from numerous defined locations
+- Log all files within directories from the location of the script
+- Pull Filename, Last Accessed Time and Directory Path
+- Present this information in a **.xlsx** file.
 
 
 ### The Code
