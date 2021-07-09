@@ -2,7 +2,7 @@
 layout: post
 title: Case Logger Script 
 cover-img: /assets/img/computer-screen-monitor-text.jpg
-thumbnail-img: /assets/img/logger.PNG
+thumbnail-img: /assets/img/logger.png
 share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation, Validation]
 ---
