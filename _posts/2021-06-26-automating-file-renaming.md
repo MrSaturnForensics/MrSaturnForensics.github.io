@@ -30,7 +30,7 @@ if not working_dir_check_structure == "Case Files":
    quit()
 {% endhighlight %}
 
-I then moved onto building in where the script can pull the details from to build the filenames. In a similar way, I had defined **working_dir** as the path the script is ran from. I then created some variables containing the folder names of the case reference / exhibit reference, finally I then assigned the filename structure using an **F String** containing the assigned varaibles, which would now be **photograph_filename**.
+I then moved onto building in where the script can pull the details from to build the filenames. In a similar way, I had defined **working_dir** as the path the script is ran from. I then created some variables containing the folder names of the case reference and exhibit reference, finally I then assigned the filename structure using an **F String** containing the assigned variables, which would now be **photograph_filename**.
 
 **_F-strings_** are string literals that have an f at the beginning and curly braces containing expressions that will be replaced with their values.
 
