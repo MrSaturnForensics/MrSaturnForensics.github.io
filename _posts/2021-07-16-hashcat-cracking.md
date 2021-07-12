@@ -24,5 +24,5 @@ _$itunes_backup$*< iOS version[9]>*<WPKY>*< ITERATIONS [1K]>*<SALT>**_
 
 The problem with **iOS 10 backups and above** is that it adds an extra layer of protection using **PBKDF2 with 10 million iterations**. This massively slows down password cracking time.
 
-_**PBKDF2** is a simple cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
+_**PBKDF2** is a cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
 
