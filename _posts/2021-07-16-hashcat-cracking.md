@@ -10,7 +10,7 @@ tags: [Hashcat, Password Cracking]
 
 
 
-***iTunes Encrypted Backup
+###iTunes Encrypted Backup
 
 The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
 
