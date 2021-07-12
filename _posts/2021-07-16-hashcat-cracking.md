@@ -7,3 +7,14 @@ thumbnail-img: /assets/img/hashcat.PNG
 share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
+
+
+
+***iTunes Encrypted Backup***
+The keys for the iTunes encrypted backup can be found in a file called Manifest.plist and are stored in a container called a Keybag. The iOS backup format looks like this:
+
+iOS => 10:
+_$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>_
+  
+iOS 9:
+_$itunes_backup$*< iOS version[9]>*<WPKY>*< ITERATIONS [1K]>*<SALT>**_
