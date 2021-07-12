@@ -17,8 +17,8 @@ The keys for the iTunes encrypted backup can be found in a file called **Manifes
 __**Keybag** contains a number of encryption 'class keys' that ultimately protect files in the file system__
 
 iOS => 10:
-_$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>_
-  
+_$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>
+
 iOS 9:
 _$itunes_backup$*< iOS version[9]>*<WPKY>*< ITERATIONS [1K]>*<SALT>**_
   
