@@ -14,7 +14,7 @@ _If you ever need a full breakdown of hashcat attacks/attack modes you can alway
 **Hash type [-m]**
 Used to select the hash you want to attack. There are a lot of hashes supported by hashcat.  
 
-A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. (https://hashcat.net/wiki/doku.php?id=example_hashes)
+A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. 
 
 **Attack Mode [-a]**
   0 | Straight
