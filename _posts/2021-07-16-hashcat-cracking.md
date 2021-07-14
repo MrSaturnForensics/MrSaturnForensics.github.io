@@ -16,7 +16,7 @@ Used to select the hash you want to attack. There are a lot of hashes supported 
 
 A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. 
 
-**Attack Mode [-a]**
+**Attack Modes [-a]**
 
 | Attack Number   | Attack Type     | 
 | --------------- | --------------- | 
@@ -29,7 +29,9 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 **Rule based attack [-r]**
 A rule based attack takes every word in a **dictionary** file, then it will try variations of every word based on the rules you set. This means for every word in the dictionary, it will try 64 different variations of the word.
 
-Be aware, some of the rule files contain thousands of rules and the time to crack a password will be unrealistic, unless you are cracking an absolutely terrible hash algorithm such as MD5.
+a _**dictionary**_ is a list of cracked passwords from previous data dumps of websites.
+
+Be aware, some of the rule files contain thousands of rules and the time to crack a password will be unrealistic, unless you are cracking a terrible hash algorithm such as MD5.
 
 **Recommended Rules**
 Based on efficiency, the **‘Best64’** rule is always the best rule to start with. Followed by **‘InsidePro-PasswordsPro’**. 
@@ -37,13 +39,21 @@ Based on efficiency, the **‘Best64’** rule is always the best rule to start 
 From there, it really depends on the type of hash you are cracking, if it is a weak hash algorithm like MD5. Then use the **'OneRuleToRuleThemAll’** rule. 
 
 **Using multiple dictionaries**
-You can also use multiple dictionaries in one attack. After a dictionary, simply add another dictionary name: rockyou.txt dict2.txt dict3.txt
+You can also use multiple dictionaries in one attack. After a dictionary, simply add another dictionary name to the command.
 
 **Combination Attack [-a 1]**
 This works by appending the words of two dictionaries, for example if one dictionary contains the word ‘test’ and the second dictionary contains the word ‘123’ it will append one word to the other to make ‘test123’.
 
 **Mask attack (Advanced Brute Force) [-a 3]**
 Mask attacks take advantage of setting customised attacks by using charsets. This method is far quicker than simply trying to brute force a password. The charsets can be found below:
+
+| Charsets  | Data Type     | 
+| --------- | ------------- | 
+| l | abcdefghijklmnopqrstuvwxyz  | [Lowercase letters]   |
+| 1 | Combination             |
+| 3 | Brute-force + Mask      |
+| 6 | Hybrid Wordlist + Mask  |
+| 7 | Hybrid Mask + Wordlist  |
 
 Charsets:
   l | abcdefghijklmnopqrstuvwxyz 	    [Lowercase letters]
