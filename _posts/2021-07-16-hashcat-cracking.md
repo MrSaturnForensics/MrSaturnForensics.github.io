@@ -12,7 +12,9 @@ tags: [Hashcat, Password Cracking]
 _If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat64.exe --help’ in the command line while hashcat is open._
 
 **Hash type [-m]**
-Used to select the hash you want to attack. There are a lot of hashes supported by hashcat.  A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. (https://hashcat.net/wiki/doku.php?id=example_hashes)
+Used to select the hash you want to attack. There are a lot of hashes supported by hashcat.  
+
+A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. (https://hashcat.net/wiki/doku.php?id=example_hashes)
 
 **Attack Mode [-a]**
   0 | Straight
