@@ -8,7 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
 
-### Hashcat Features Breakdown
+### Hashcat Breakdown
 _If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat64.exe --help’ in the command line while hashcat is open._
 
 **Hash type [-m]**
