@@ -18,7 +18,7 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 
 **Attack Mode [-a]**
 | Attack Number | Attack Type | 
-| --------------- | --------------- | 
+| ------------- | ----------- | 
 | 0 | Straight | 
 | 1 | Combination | 
 | 3 | Brute-force/Mask |
