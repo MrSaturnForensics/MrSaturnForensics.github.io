@@ -25,7 +25,7 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 | 6 | Hybrid Wordlist + Mask | 
 | 7 | Hybrid Mask + Wordlist |
 
-| Column 1 Header | Column 2 Header | 
+| Attack Number   | Attack Type     | 
 | --------------- | --------------- | 
 | Row 1 Column 1 | Row 1 Column 2 |
 | Row 2 Column 1 | Row 2 Column 2 |
