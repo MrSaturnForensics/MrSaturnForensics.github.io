@@ -29,7 +29,9 @@ A rule based attack takes every word in a **dictionary** file, then it will try 
 Be aware, some of the rule files contain thousands of rules and the time to crack a password will be unrealistic, unless you are cracking an absolutely terrible hash algorithm such as MD5.
 
 **Recommended Rules**
-Based on efficiency, the **‘Best64’** rule is always the best rule to start with. Followed by **‘InsidePro-PasswordsPro’**. From there, it really depends on the type of hash you are cracking, if it is a weak hash algorithm like MD5. Then use the **'OneRuleToRuleThemAll’** rule. 
+Based on efficiency, the **‘Best64’** rule is always the best rule to start with. Followed by **‘InsidePro-PasswordsPro’**. 
+
+From there, it really depends on the type of hash you are cracking, if it is a weak hash algorithm like MD5. Then use the **'OneRuleToRuleThemAll’** rule. 
 
 **Using multiple dictionaries**
 You can also use multiple dictionaries in one attack. After a dictionary, simply add another dictionary name: rockyou.txt dict2.txt dict3.txt
