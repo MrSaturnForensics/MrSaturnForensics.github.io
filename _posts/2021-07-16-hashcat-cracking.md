@@ -17,6 +17,7 @@ Used to select the hash you want to attack. There are a lot of hashes supported 
 A full list can be found in the link above or by simply typing **‘hashcat64.exe --help’** into the command line of hashcat. 
 
 **Attack Mode [-a]**
+
 | Attack Number   | Attack Type     | 
 | --------------- | --------------- | 
 | 0 | Straight                |
