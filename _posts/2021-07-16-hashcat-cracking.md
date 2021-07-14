@@ -27,9 +27,11 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 
 | Attack Number   | Attack Type     | 
 | --------------- | --------------- | 
-| Row 1 Column 1 | Row 1 Column 2 |
-| Row 2 Column 1 | Row 2 Column 2 |
-| Row 3 Column 1 | Row 3 Column 2 |
+| 0 | Row 1 Column 2 |
+| 1 | Row 2 Column 2 |
+| 3 | Row 3 Column 2 |
+| 6 | Row 2 Column 2 |
+| 7 | Row 3 Column 2 |
 
 **Rule based attack [-r]**
 A rule based attack takes every word in a **dictionary** file, then it will try variations of every word based on the rules you set. This means for every word in the dictionary, it will try 64 different variations of the word.
