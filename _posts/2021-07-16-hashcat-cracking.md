@@ -25,12 +25,12 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 | 6 | Hybrid Wordlist + Mask | 
 | 7 | Hybrid Mask + Wordlist |
 
-  0 | Straight
-  1 | Combination
-  3 | Brute-force/Mask
-  6 | Hybrid Wordlist + Mask
-  7 | Hybrid Mask + Wordlist
-  
+| Column 1 Header | Column 2 Header | Column 3 Header |
+| --------------- | --------------- | --------------- |
+| Row 1 Column 1 | Row 1 Column 2 | Row 1 Column 3 |
+| Row 2 Column 1 | Row 2 Column 2 | Row 2 Column 3 |
+| Row 3 Column 1 | Row 3 Column 2 | Row 3 Column 3 |
+
 **Rule based attack [-r]**
 A rule based attack takes every word in a **dictionary** file, then it will try variations of every word based on the rules you set. This means for every word in the dictionary, it will try 64 different variations of the word.
 
