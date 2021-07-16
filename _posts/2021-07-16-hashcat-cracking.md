@@ -12,7 +12,22 @@ tags: [Hashcat, Password Cracking]
 
 **If the device was encrypted using the User Password authentication method this will be possible.**
 
-**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery keys, and are far too complex to bruteforce - (48 digits).**
+**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery keys, and are far too complex to bruteforce - (48 digits long).**
+
+Initially I started by creating a BitLocker container, I took a USB with a basic **.txt** file on it and enabled bitlocker. 
+
+<a href="https://ibb.co/KVXrqHK"><img src="https://i.ibb.co/BTtCZRn/Capture.png" alt="Capture" border="0" /></a>
+
+I then set it up using the User Password authentication method, with a password of **Saturn_1**
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/n0khmgr/Capture1.png" alt="Capture1" border="0" /></a>
+
+I then dismounted the USB, and imaged the USB creating a RAW DD file of the USB's contents in **FTKImager**.
+
+_A RAW file is an exact raw copy of the original data_
+
+<a href="https://ibb.co/gtCxjhx"><img src="https://i.ibb.co/CVFf1Df/Capture2.png" alt="Capture2" border="0" /></a>
+
 
    **bitlocker2john** should then print the following hashes:
    
