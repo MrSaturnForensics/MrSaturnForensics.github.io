@@ -54,8 +54,8 @@ Mask attacks take advantage of setting customised attacks by using charsets. Thi
 | d - 0123456789 	                | [Numbers]             |
 | h - 0123456789abcdef 			      | [Lowercase Hex values]|
 | H - 0123456789ABCDEF 			      | [Uppercase Hex values]|
-| a | ?l?u?d?s                    | [Combination of the above, excluding hex]|
-| b | 0x00 - 0xff	                | [Raw bytes]           |
+| a - ?l?u?d?s                    | [Combination of the above, excluding hex]|
+| b - 0x00 - 0xff	                | [Raw bytes]           |
   
 These are used by entering ‘?’ Followed by the charset you desire. If you wanted all numbers with a password length of 5:
 -a 3 ?d?d?d?d?d
