@@ -18,7 +18,7 @@ Initially I started by creating a BitLocker container, I took a USB with a basic
 
 <a href="https://ibb.co/KVXrqHK"><img src="https://i.ibb.co/BTtCZRn/Capture.png" alt="Capture" border="0" /></a>
 
-I then set it up using the User Password authentication method, with a password of **Saturn_1**
+I then set it up using the User Password authentication method, with a password of **'Saturn_1'**
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/n0khmgr/Capture1.png" alt="Capture1" border="0" /></a>
 
