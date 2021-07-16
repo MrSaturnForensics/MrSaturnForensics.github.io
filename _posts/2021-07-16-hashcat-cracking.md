@@ -14,7 +14,7 @@ tags: [Hashcat, Password Cracking]
 
 **If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery keys, and are far too complex to bruteforce - (48 digits long).**
 
-Initially I started by creating a BitLocker container, I took a USB with a basic **.txt** file on it and enabled BitLocker. 
+Initially I started by enabling BitLocker on a USB with a basic **.txt** file.
 
 <a href="https://ibb.co/KVXrqHK"><img src="https://i.ibb.co/BTtCZRn/Capture.png" alt="Capture" border="0" /></a>
 
