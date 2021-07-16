@@ -16,6 +16,8 @@ tags: [Hashcat, Password Cracking]
 
    **bitlocker2john** should then print the following hashes:
    
+   <a href="https://ibb.co/ncSyPd4"><img src="https://i.ibb.co/hWvNYQr/Capture3.png" alt="Capture3" border="0" /></a>
+   
    **$bitlocker$0$**... : User Password fast attack mode
    
    **$bitlocker$1$**... : User Password attack mode with MAC verification (slower execution, no false positives)
