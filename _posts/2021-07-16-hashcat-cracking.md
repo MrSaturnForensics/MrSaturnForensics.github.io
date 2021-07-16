@@ -82,13 +82,6 @@ As above however, the mask will come before the dictionary.
 
 **-a 7 ?d?d?d?d OxfordEnglish.txt** 
 
-Setting checkpoints
-You can checkpoint the current attack by simply pressing [c]. It is recommended that you rename the checkpoint in the hashcat root folder so that it does not get overwritten. Default restore/checkpoint file is:
-hashcat.restore
-
-You could rename this ‘saturnattack.restore so you have your own restore checkpoint. To restore this session later you simply open hashcat and type the following:
-hashcat.exe --restore --session saturnattack
-
 Recommended Dictionaries
 Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest to largest):
 ⦁	Rockyou.txt
