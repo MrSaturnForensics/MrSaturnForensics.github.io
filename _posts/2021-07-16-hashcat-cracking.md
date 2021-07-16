@@ -11,7 +11,8 @@ tags: [Hashcat, Password Cracking]
 ### Cracking BitLocker
 
 **NOTE - If the device was encrypted using the User Password authentication method this will be possible. 
-**If using a smart code PIN to unlock the Bitlocker container, this method will only return $2/3 which are the recovery keys which are far too complex to bruteforce - (48 digits).**
+
+**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2/3 hashes which are the recovery keys, and are far too complex to bruteforce - (48 digits).**
 
    13   bitlocker2john prints these two hashes:
    14   * $bitlocker$0$... : it starts the User Password fast attack mode
