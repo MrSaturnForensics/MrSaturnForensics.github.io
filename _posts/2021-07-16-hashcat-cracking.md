@@ -24,7 +24,7 @@ I then set it up using the User Password authentication method, with a password 
 
 I then dismounted the USB, and imaged the USB creating a **RAW DD** file of the USB's contents in **FTKImager**.
 
-_A RAW file is an exact copy of the original data_
+_A RAW file is an exact copy of the original data._
 
 <a href="https://ibb.co/gtCxjhx"><img src="https://i.ibb.co/CVFf1Df/Capture2.png" alt="Capture2" border="0" /></a>
 
