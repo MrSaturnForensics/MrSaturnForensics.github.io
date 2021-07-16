@@ -22,9 +22,9 @@ I then set it up using the User Password authentication method, with a password 
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/n0khmgr/Capture1.png" alt="Capture1" border="0" /></a>
 
-I then dismounted the USB, and imaged the USB creating a RAW DD file of the USB's contents in **FTKImager**.
+I then dismounted the USB, and imaged the USB creating a **RAW DD** file of the USB's contents in **FTKImager**.
 
-_A RAW file is an exact raw copy of the original data_
+_A RAW file is an exact copy of the original data_
 
 <a href="https://ibb.co/gtCxjhx"><img src="https://i.ibb.co/CVFf1Df/Capture2.png" alt="Capture2" border="0" /></a>
 
