@@ -49,14 +49,12 @@ Mask attacks take advantage of setting customised attacks by using charsets. Thi
 
 | Charsets  | Data Type     | 
 | --------- | ------------- | 
-| l abcdefghijklmnopqrstuvwxyz  | [Lowercase letters]   |
-| u ABCDEFGHIJKLMNOPQRSTUVWXYZ  | [Uppercase letters]   |
-| d 0123456789 	                | [numbers]             |
-| h 0123456789abcdef 			      | [Lowercase Hex values]|
-
-
-  H | 0123456789ABCDEF 			          [Uppercase Hex values]
-  s | !"#$%&'()*+,-./:;<=>?@[\]^_{|}~ [Special characters]
+| l - abcdefghijklmnopqrstuvwxyz  | [Lowercase letters]   |
+| u - ABCDEFGHIJKLMNOPQRSTUVWXYZ  | [Uppercase letters]   |
+| d - 0123456789 	                | [numbers]             |
+| h - 0123456789abcdef 			      | [Lowercase Hex values]|
+| H - 0123456789ABCDEF 			      | [Uppercase Hex values]|
+  
   a | ?l?u?d?s     [Combination of the above, excluding hex]
   b | 0x00 - 0xff	 [Raw bytes]
   
