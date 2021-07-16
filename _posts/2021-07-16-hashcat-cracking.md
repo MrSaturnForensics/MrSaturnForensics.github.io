@@ -17,8 +17,11 @@ tags: [Hashcat, Password Cracking]
    **bitlocker2john** should then print the following hashes:
    
    **$bitlocker$0$**... : User Password fast attack mode
-   **$bitlocker$1$**... : User Password attack mode with MAC verification (slower execution, no false positives) 
+   
+   **$bitlocker$1$**... : User Password attack mode with MAC verification (slower execution, no false positives)
+   
    **$bitlocker$2$**... : Recovery Password fast attack mode
+   
    **$bitlocker$3$**... : Recovery Password attack mode with MAC verification (slower execution, no false positives)
 
 ### Hashcat Breakdown
