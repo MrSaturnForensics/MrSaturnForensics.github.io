@@ -8,6 +8,19 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
 
+### Cracking BitLocker
+
+**NOTE - If the device was encrypted using the User Password authentication method this will be possible. 
+**If using a smart code PIN to unlock the Bitlocker container, this method will only return $2/3 which are the recovery keys which are far too complex to bruteforce - (48 digits).**
+
+   13   bitlocker2john prints these two hashes:
+   14   * $bitlocker$0$... : it starts the User Password fast attack mode
+   15   * $bitlocker$1$... : it starts the User Password attack mode with MAC verification (slower execution, no false positives)
+   16 
+   17 * In any case, bitlocker2john prints these two hashes:
+   18   * $bitlocker$2$... : it starts the Recovery Password fast attack mode
+   19   * $bitlocker$3$... : it starts the Recovery Password attack mode with MAC verification (slower execution, no false positives)
+
 ### Hashcat Breakdown
 _If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat.exe --help’ in the command line while hashcat is open._
 
