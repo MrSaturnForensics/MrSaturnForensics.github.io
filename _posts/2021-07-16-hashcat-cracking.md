@@ -57,26 +57,30 @@ Mask attacks take advantage of setting customised attacks by using charsets. Thi
 | a - ?l?u?d?s                    | [Combination of the above, excluding hex]|
 | b - 0x00 - 0xff	                | [Raw bytes]           |
   
-These are used by entering ‘?’ Followed by the charset you desire. If you wanted all numbers with a password length of 5:
--a 3 ?d?d?d?d?d
+These are used by entering ‘?’ Followed by the charset you desire. If you wanted all numbers with a password length of 5: 
 
-You can also set custom charsets in each space by using -1 -2 -3 etc.
--a 3 -1 ?u?l?d       ?1?1?1?1?1
+**-a 3 ?d?d?d?d?d**
+
+You can also set custom charsets in each space by using -1 -2 -3 etc:
+
+**-a 3 -1 ?u?l?d   ?1?1?1?1?1**
 
 The above will try a combination of all uppercase letters, lowercase letters and numbers in each of those 5 spaces. 1 is set to contain ?u?l?d and is used in every space.
 You can go further than this.
--a 3 -1 ?u?l -2 ?l?d ?1?2?2?2?2?2 -i --increment-min=5 --increment-max=8
+
+**-a 3 -1 ?u?l -2 ?l?d ?1?2?2?2?2?2 -i --increment-min=5 --increment-max=8**
 
 This takes advantage of two custom charsets -1 and -2 is you can REALLY narrow down cracking time. This assumes the first letter is either an uppercase or lowercase letter with the rest being either lowercase letters or numbers. What this also does is start as a 5 letter password, and increments up to an 8 letter password.
 
 **Hybrid dictionary and mask attack [-a 6]**
 Want to try every word in the English dictionary followed by 4 numbers? This is common due to humans being noobs/predictable and using words followed by a year. You can use a hybrid attack consisting of a dictionary and a mask.
--a 6 OxfordEnglish.txt ?d?d?d?d
+
+**-a 6 OxfordEnglish.txt ?d?d?d?d**
 
 Hybrid mask and dictionary attack [-a 7]
 As above however, the mask will come before the dictionary.
 
--a 7 ?d?d?d?d OxfordEnglish.txt 
+**-a 7 ?d?d?d?d OxfordEnglish.txt** 
 
 Setting checkpoints
 You can checkpoint the current attack by simply pressing [c]. It is recommended that you rename the checkpoint in the hashcat root folder so that it does not get overwritten. Default restore/checkpoint file is:
