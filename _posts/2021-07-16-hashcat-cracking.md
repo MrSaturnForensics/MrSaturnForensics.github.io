@@ -64,8 +64,9 @@ _A RAW file is an exact copy of the original data on a device._
    
    **$bitlocker$3$**... : Recovery Password attack mode with MAC verification (slower execution, no false positives)
 
-### Hashcat Breakdown
-_If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat.exe --help’ in the command line while hashcat is open._
+### Hashcat Breakdown / Guide
+
+_**If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat.exe --help’ in the command line while hashcat is open**._
 
 **Hash type [-m]**
 Used to select the hash you want to attack. There are a lot of hashes supported by hashcat.  
@@ -84,8 +85,6 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 
 **Rule based attack [-r]**
 A rule based attack takes every word in a **dictionary** file, then it will try variations of every word based on the rules you set. This means for every word in the dictionary, it will try 64 different variations of the word.
-
-a _**dictionary**_ is a list of cracked passwords from previous data dumps of websites.
 
 Be aware, some of the rule files contain thousands of rules and the time to crack a password will be unrealistic, unless you are cracking a terrible hash algorithm such as MD5.
 
