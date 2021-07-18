@@ -20,6 +20,8 @@ However, unlike other encryption algorithms that transform data, hashing is diff
 
 The biggest problem with password hashing is that if you run a specific word like 'green' through a hashing algorithm, the hashed outcome for that word will always be the same.  Meaning you could in theory guess millions of passwords, run them through the same algorithm, and then see to see what the hash for a specific word is. Comparing this against the hash in question will allow you to try find a matching hash, giving you the password.
 
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/6YJ7Rbk/image.png" alt="image" border="0" /></a>
+
 **Dictionary** and **brute-force** attacks are the most common ways of guessing passwords. These techniques make use of a file that contains words, phrases, common passwords and other strings that are likely to be used as a viable password. 
 
 
