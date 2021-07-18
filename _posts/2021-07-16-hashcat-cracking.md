@@ -18,7 +18,7 @@ However, unlike other encryption algorithms that transform data, hashing is diff
 
 <a href="https://ibb.co/fG8qXdf"><img src="https://i.ibb.co/4gsKFRz/image.png" alt="image" border="0" /></a>
 
-The biggest problem with password hashing is that if you run a specific word like 'green' through a hashing algorithm, the hashed outcome for that word will always be the same.  Meaning you could in theory guess millions of passwords, run them through the same algorithm, and then see what the hash for a specific word is. Comparing this against the hash in question will allow you to try find a matching hash, giving you the password.
+The biggest problem with password hashing is that if you run a specific word like 'green' through a hashing algorithm, the hashed outcome for that word will always be the same.  Meaning you could in theory guess millions of passwords, run them through the same algorithm, and then see what the hash for a specific password is. Comparing this against the hash in question will allow you to try find a matching hash, giving you the password.
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/6YJ7Rbk/image.png" alt="image" border="0" /></a>
 
