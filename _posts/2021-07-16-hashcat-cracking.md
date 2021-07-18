@@ -55,7 +55,6 @@ _A RAW file is an exact copy of the original data on a device._
    **bitlocker2john** should then print the following hashes:
    
    <a href="https://ibb.co/ncSyPd4"><img src="https://i.ibb.co/hWvNYQr/Capture3.png" alt="Capture3" border="0" /></a>
-   <a href="https://ibb.co/TPhh7yc"><img src="https://i.ibb.co/DwKKvd4/image.png" alt="image" border="0" /></a>
    
    **$bitlocker$0$**... : User Password fast attack mode
    
