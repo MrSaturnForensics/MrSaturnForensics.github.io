@@ -10,6 +10,22 @@ tags: [Hashcat, Password Cracking]
 
 Encrypted containers are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
 
+### Password Hashes
+
+Hashing is a one-way function to scramble data — it takes readable text and transforms it into a completely different string of characters with a set length.
+
+However, unlike other encryption algorithms that transform data, hashing is difficult to revert. So if you obtain a database with hashed passwords, hash decoding is a time consuming process.
+
+<a href="https://ibb.co/fG8qXdf"><img src="https://i.ibb.co/4gsKFRz/image.png" alt="image" border="0" /></a>
+
+The biggest problem with password hashing is that if you run a specific word like 'green' through a hashing algorithm, the hashed outcome for that word will always be the same.  Meaning you could in theory guess millions of passwords, run them through the same algorithm, and then see to see what the hash for a specific word is. Comparing this against the hash in question will allow you to try find a matching hash, giving you the password.
+
+**Dictionary** and **brute-force** attacks are the most common ways of guessing passwords. These techniques make use of a file that contains words, phrases, common passwords and other strings that are likely to be used as a viable password. 
+
+
+
+
+
 ### Cracking BitLocker
 
 **If the device was encrypted using the User Password authentication method this will be possible.**
