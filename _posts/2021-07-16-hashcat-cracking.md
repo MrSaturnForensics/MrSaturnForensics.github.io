@@ -8,7 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
 
-Encrypted containers are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
+Encryption and password locked application's are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
 
 ### Password Hashes
 
