@@ -29,7 +29,7 @@ If you recover the hash of a password your trying to crack, using this method an
 
 _**Dictionary attacks**_ work by trying a list of words in a dictionary, often previously used passwords, often from lists obtained from past security breaches.
 
-_**Brute-Force attacks**_ work by trial-and-error to find the correct password, working through all possible combinations hoping to guess correctly. **This is only suggested for a numeric password**
+_**Brute-Force attacks**_ work by trial-and-error to find the correct password, working through all possible combinations hoping to guess correctly. **This is only suggested for a numeric password**.
 
 ### Cracking BitLocker
 
