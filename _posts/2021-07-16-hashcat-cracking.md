@@ -158,7 +158,7 @@ Here is a list of the recommended dictionaries to use on iOS 10 backups (smalles
 
 The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
 
-_The **Keybag** contains a number of encryption 'class keys' that ultimately protect files in the file system._
+_The **Keybag** contains a number of encryption 'class keys' that protect files in the file system._
 
 **iOS => 10:**
 _$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>_
