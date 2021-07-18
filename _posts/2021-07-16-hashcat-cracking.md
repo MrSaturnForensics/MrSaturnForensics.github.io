@@ -14,7 +14,7 @@ Encryption and password locked application's are quite common to see in an inves
 
 Hashing is a one-way function to scramble data — it takes readable text and transforms it into a completely different string of characters with a set length.
 
-However, unlike other encryption algorithms that transform data, hashing is difficult to revert. So if you obtain a database with hashed passwords, hash decoding is a time consuming process.
+However, unlike other encryption algorithms that transform data, hashing is difficult to revert, making cracking a time consuming process.
 
 <a href="https://ibb.co/fG8qXdf"><img src="https://i.ibb.co/4gsKFRz/image.png" alt="image" border="0" /></a>
 
