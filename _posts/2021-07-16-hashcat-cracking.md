@@ -8,11 +8,13 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
 
+Encrypted containers are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
+
 ### Cracking BitLocker
 
 **If the device was encrypted using the User Password authentication method this will be possible.**
 
-**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery keys, and are far too complex to crack - (48 digits long).**
+**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery keys, and are far too complex to crack meaning it is highly unlikely to crack - (48 digits long).**
 
 Initially I started by enabling BitLocker on a USB with a basic **.txt** file.
 
