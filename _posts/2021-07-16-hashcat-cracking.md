@@ -25,11 +25,11 @@ If you recover the hash of a password your trying to crack, using this method an
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/6YJ7Rbk/image.png" alt="image" border="0" /></a>
 
-**Dictionary** and **brute-force** attacks are the most common ways of guessing passwords. These techniques make use of a file that contains words, phrases, common passwords and other strings that are likely to be used as a viable password. 
+**Dictionary** and **Brute-Force** attacks are the most common ways of guessing passwords. These techniques make use of a file that contains words, phrases, common passwords and other strings that are likely to be used as a viable password. 
 
+_**Dictionary attacks**_ work by trying a list of words in a dictionary, often previously used passwords, often from lists obtained from past security breaches._
 
-
-
+_**Brute-Force attacks**_ work by trial-and-error to find the correct password, working through all possible combinations hoping to guess correctly. **This is only suggested for a numeric password**
 
 ### Cracking BitLocker
 
