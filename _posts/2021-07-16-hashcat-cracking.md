@@ -72,6 +72,8 @@ The following command was ran from a command prompt within the folder containing
    **$bitlocker$3$**... : Recovery Password attack mode with MAC verification (slower execution, no false positives)
    
 If either **$0 or $1** are recovered, these can be used for an attempted crack of the password.
+
+In this example we will use **$0** recovered as: $bitlocker$0$16$6b0e4c7e5643fdf7718dc4996ee193fa$1048576$12$7080c76a2f7ad70103000000$60$316e1c8d5d48a19c8a54267ccc8e45f4a082866e4f4e06a3fb58e5005b599c45228e0843354c306ef9db2ddd3e0e0ee6b845cd413696c632ecbf179a
  
 
 ### Hashcat Breakdown / Guide
