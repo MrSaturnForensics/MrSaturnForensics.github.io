@@ -76,7 +76,17 @@ If either **$0 or $1** are recovered, these can be used for an attempted crack o
 In this example we will use **$0** recovered as: _$bitlocker$0$16$6b0e4c7e5643fdf7718dc4996ee193fa$1048576$12$7080c76a2f7ad701_
 _03000000$60$316e1c8d5d48a19c8a54267ccc8e45f4a082866e4f4e06a3fb58e5005b599c4_
 _5228e0843354c306ef9db2ddd3e0e0ee6b845cd413696c632ecbf179a_
- 
+
+Now we can attempt to try recover the password, I opened hashcat and then ran the following command:
+
+**hashcat.exe -m 22100 $bitlocker$0 -a 0 Wordlists\kaonashi.txt -r rules\OneRuleToRuleThemAll.rule -O**
+
+
+
+
+
+
+
 
 ### Hashcat Breakdown / Guide
 
