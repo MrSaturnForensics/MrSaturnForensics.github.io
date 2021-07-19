@@ -57,9 +57,7 @@ I then used the **bitlocker2john** tool from **John the Ripper**, another passwo
 
 The following command was ran from a command prompt within the folder containing **bitlocker2john** and the **RAW** image file.
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/S0yVGqW/Capture4.png" alt="Capture4" border="0" /></a>
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/Qd79qC3/Capture5.png" alt="Capture5" border="0" /></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/S0yVGqW/Capture4.png" alt="Capture4" border="0" /></a> <a href="https://imgbb.com/"><img src="https://i.ibb.co/Qd79qC3/Capture5.png" alt="Capture5" border="0" /></a>
 
    **bitlocker2john** should then print the following hashes once processing has completed:
    
