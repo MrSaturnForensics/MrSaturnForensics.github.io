@@ -70,6 +70,9 @@ The following command was ran from a command prompt within the folder containing
    **$bitlocker$2$**... : Recovery Password fast attack mode
    
    **$bitlocker$3$**... : Recovery Password attack mode with MAC verification (slower execution, no false positives)
+   
+If either **$0 or $1** are recovered, these can be used for an attempted crack.
+ 
 
 ### Hashcat Breakdown / Guide
 
