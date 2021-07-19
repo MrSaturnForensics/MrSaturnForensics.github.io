@@ -51,8 +51,17 @@ _A RAW file is an exact copy of the original data on a device._
 
 <a href="https://ibb.co/gtCxjhx"><img src="https://i.ibb.co/CVFf1Df/Capture2.png" alt="Capture2" border="0" /></a>
 
+I then used the **bitlocker2john** tool from **John the Ripper**, another password cracking tool.
 
-   **bitlocker2john** should then print the following hashes:
+**_bitlocker2john_** extracts hashes from password protected BitLocker encrypted volumes. It returns up to four output hashes.
+
+The following command was ran from a command prompt within the folder containing **bitlocker2john** and the **RAW** image file.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/S0yVGqW/Capture4.png" alt="Capture4" border="0" /></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Qd79qC3/Capture5.png" alt="Capture5" border="0" /></a>
+
+   **bitlocker2john** should then print the following hashes once processing has completed:
    
    <a href="https://ibb.co/ncSyPd4"><img src="https://i.ibb.co/hWvNYQr/Capture3.png" alt="Capture3" border="0" /></a>
    
