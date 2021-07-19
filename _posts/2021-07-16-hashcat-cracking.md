@@ -77,9 +77,17 @@ In this example we will use **$0** recovered as: _$bitlocker$0$16$6b0e4c7e5643fd
 _03000000$60$316e1c8d5d48a19c8a54267ccc8e45f4a082866e4f4e06a3fb58e5005b599c4_
 _5228e0843354c306ef9db2ddd3e0e0ee6b845cd413696c632ecbf179a_
 
-Now we can attempt to try recover the password, I opened hashcat and then ran the following command:
+Now we can attempt to try recover the password, I opened hashcat in command prompt and then ran the following command:
 
-**hashcat.exe -m 22100 $bitlocker$0 -a 0 Wordlists\kaonashi.txt -r rules\OneRuleToRuleThemAll.rule -O**
+**hashcat.exe -m 22100 $bitlocker$0 (rest of hash redacted) -a 0 Wordlists\rockyou.txt -r rules\best64.rule -O**
+
+**-m** represents the type of hash being cracked, 22100 being BitLocker.
+
+**-a** represents the attack **0** being dictionary, trying all words in a list. **rockyou.txt** is the provided list of words to try crack and compare hashes for.
+
+**-r** represents the rule of the attack being **best64**, This means for every word in the dictionary, it will try 64 different variations of the word.
+
+**-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32).
 
 
 
