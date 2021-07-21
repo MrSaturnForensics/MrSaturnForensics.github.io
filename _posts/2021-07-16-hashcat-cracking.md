@@ -158,6 +158,7 @@ A full list can be found in the link above or by simply typing **‘hashcat64.ex
 | 7 | Hybrid Mask + Wordlist  |
 
 **Rule based attack [-r]**
+  
 A rule based attack takes every word in a **dictionary** file, then it will try variations of every word based on the rules you set. This means for every word in the dictionary, it will try 64 different variations of the word.
 
 Be aware, some of the rule files contain thousands of rules and the time to crack a password will be unrealistic, unless you are cracking a terrible hash algorithm such as MD5.
@@ -205,11 +206,12 @@ You can go further than this.
 This takes advantage of two custom charsets -1 and -2 is you can REALLY narrow down cracking time. This assumes the first letter is either an uppercase or lowercase letter with the rest being either lowercase letters or numbers. What this also does is start as a 5 letter password, and increments up to an 8 letter password.
 
 **Hybrid dictionary and mask attack [-a 6]**
-Want to try every word in the English dictionary followed by 4 numbers? This is common due to humans being noobs/predictable and using words followed by a year. You can use a hybrid attack consisting of a dictionary and a mask.
+If you want to try every word in the English dictionary followed by 4 numbers, you can use a hybrid attack consisting of a dictionary and a mask.
 
 **-a 6 OxfordEnglish.txt ?d?d?d?d**
 
-Hybrid mask and dictionary attack [-a 7]
+**Hybrid mask and dictionary attack [-a 7]**
+  
 As above however, the mask will come before the dictionary.
 
 **-a 7 ?d?d?d?d OxfordEnglish.txt** 
