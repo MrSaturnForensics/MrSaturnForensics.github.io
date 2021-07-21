@@ -106,9 +106,7 @@ The problem with **iOS 10 backups and above** is that it adds an extra layer of 
 
 _**PBKDF2** is a cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
 
-*Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to the rockyou.txt and realhuman_phill.txt dictionaries.
-
-
+*Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to smaller wordlists with more simple rules.
 
 
 
