@@ -92,7 +92,7 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 
 ### Cracking iTunes Encrypted Backup
 
-The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
+The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format is shown below:
 
 _The **Keybag** contains a number of encryption 'class keys' that protect files in the file system._
 
