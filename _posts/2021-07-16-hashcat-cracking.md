@@ -107,6 +107,16 @@ The problem with **iOS 10 backups and above** is that it adds an extra layer of 
 _**PBKDF2** is a cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
 
 *Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to smaller wordlists with more simple rules.
+  
+Following the recovery of the **Manifest.plist**, I then used **itunes_backup2hashcat.pl** to extract the hash. This was run from a command prompt within the same folder as the file using the below:
+  
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Ycg4D3z/ios1.png" alt="ios1" border="0" /></a> <a href="https://ibb.co/pPS9ckw"><img src="https://i.ibb.co/dcRzFHM/ios2.png" alt="ios2" border="0" /></a>
+
+This then created a **.txt** file containing the hash: 
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/B2pMkwS/ios3.png" alt="ios3" border="0" /></a> <a href="https://ibb.co/G3dQHGd"><img src="https://i.ibb.co/4gFR1CF/ios4.png" alt="ios4" border="0" /></a>
+  
+This file was then copied over to the Hashcat root folder, and Hashcat was started, I then ran the following attack:
 
 
 
