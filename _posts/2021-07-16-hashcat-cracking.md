@@ -108,6 +108,19 @@ _**PBKDF2** is a cryptographic key derivation function, which is resistant to di
 
 *Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to smaller wordlists with more simple rules.
   
+Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest to largest):
+⦁	Rockyou.txt
+⦁	Realhuman_phill.txt
+⦁	Realuniq.lst
+⦁	Nummer_DB.top
+⦁	HashesOrg
+⦁	DCHTPassv1.0.txt
+⦁	Weakpass_2a
+
+Here is a list of the recommended dictionaries to use on iOS 10 backups (smallest to largest):
+⦁	Rockyou.txt
+⦁	Realhuman_phill.txt
+  
 Following the recovery of the **Manifest.plist**, I then used **itunes_backup2hashcat.pl** to extract the hash. This was run from a command prompt within the same folder as the file using the below:
   
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/Ycg4D3z/ios1.png" alt="ios1" border="0" /></a> <a href="https://ibb.co/pPS9ckw"><img src="https://i.ibb.co/dcRzFHM/ios2.png" alt="ios2" border="0" /></a>
@@ -192,18 +205,3 @@ Hybrid mask and dictionary attack [-a 7]
 As above however, the mask will come before the dictionary.
 
 **-a 7 ?d?d?d?d OxfordEnglish.txt** 
-
-Recommended Dictionaries
-Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest to largest):
-⦁	Rockyou.txt
-⦁	Realhuman_phill.txt
-⦁	Realuniq.lst
-⦁	Nummer_DB.top
-⦁	HashesOrg
-⦁	DCHTPassv1.0.txt
-⦁	Weakpass_2a
-
-Recommended Dictionaries
-Here is a list of the recommended dictionaries to use on iOS 10 backups (smallest to largest):
-⦁	Rockyou.txt
-⦁	Realhuman_phill.txt
