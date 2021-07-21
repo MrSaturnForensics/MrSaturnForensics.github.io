@@ -35,7 +35,7 @@ _**Brute-Force attacks**_ work by trial-and-error to find the correct password, 
 
 **If the device was encrypted using the User Password authentication method this will be possible.**
 
-**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery key hashes, and are far too complex to crack meaning it is highly unlikely to recover the key - (48 digits long).**
+**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery key hashes, and are far too complex to crack meaning it is highly unlikely to recover the key from them - (48 digits long).**
 
 Initially I started by enabling BitLocker on a USB with a basic **.txt** file.
 
