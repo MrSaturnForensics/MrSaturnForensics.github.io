@@ -90,7 +90,7 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 **-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32).
 
 
-### iTunes Encrypted Backup
+### Cracking iTunes Encrypted Backup
 
 The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
 
