@@ -90,7 +90,23 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 **-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32).
 
 
+### iTunes Encrypted Backup
 
+The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
+
+_The **Keybag** contains a number of encryption 'class keys' that protect files in the file system._
+
+**iOS => 10:**
+_$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>_
+  
+**iOS 9:**
+_$itunes_backup$*< iOS version[9]>*<WPKY>*<ITERATIONS [1K]>*<SALT>**_
+
+The problem with **iOS 10 backups and above** is that it adds an extra layer of protection using **PBKDF2 with 10 million iterations**. This massively slows down password cracking time.
+
+_**PBKDF2** is a cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
+
+*Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to the rockyou.txt and realhuman_phill.txt dictionaries.
 
 
 
@@ -183,22 +199,3 @@ Recommended Dictionaries
 Here is a list of the recommended dictionaries to use on iOS 10 backups (smallest to largest):
 ⦁	Rockyou.txt
 ⦁	Realhuman_phill.txt
-
-
-### iTunes Encrypted Backup
-
-The keys for the iTunes encrypted backup can be found in a file called **Manifest.plist** and are stored in a container called a **Keybag**. The iOS backup format looks like this:
-
-_The **Keybag** contains a number of encryption 'class keys' that protect files in the file system._
-
-**iOS => 10:**
-_$itunes_backup$*<iOS version[10]>*<WPKY>*<ITERATIONS [10MILLION]>*<SALT>*<DPIC>*<DPSL>_
-  
-**iOS 9:**
-_$itunes_backup$*< iOS version[9]>*<WPKY>*< ITERATIONS [1K]>*<SALT>**_
-
-The problem with **iOS 10 backups and above** is that it adds an extra layer of protection using **PBKDF2 with 10 million iterations**. This massively slows down password cracking time.
-
-_**PBKDF2** is a cryptographic key derivation function, which is resistant to dictionary attacks and rainbow table attacks._
-
-*Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to the rockyou.txt and realhuman_phill.txt dictionaries.
