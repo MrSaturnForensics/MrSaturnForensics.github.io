@@ -140,7 +140,7 @@ This then recovered the password as **hashcat**. (You can also check the value i
 
 ### Hashcat Breakdown / Guide
 
-_**If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘hashcat.exe --help’ in the command line while hashcat is open**._
+_**If you ever need a full breakdown of hashcat attacks/attack modes you can always type ‘help’ in the command line while hashcat is open**._
 
 **Hash type [-m]**
 Used to select the hash you want to attack. There are a lot of hashes supported by hashcat.  
