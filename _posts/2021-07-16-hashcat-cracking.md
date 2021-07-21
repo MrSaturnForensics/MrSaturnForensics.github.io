@@ -137,7 +137,7 @@ This file was then copied over to the Hashcat root folder, and Hashcat was start
   
 <a href="https://ibb.co/CnnQP2F"><img src="https://i.ibb.co/7GGKk4F/ios6.png" alt="ios6" border="0" /></a>
   
-This then recovered the password as **hashcat**.
+This then recovered the password as **hashcat**. (You can also check the value in the hashcat POTFILE.
 
 
 ### Hashcat Breakdown / Guide
