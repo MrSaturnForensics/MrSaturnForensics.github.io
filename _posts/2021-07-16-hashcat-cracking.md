@@ -216,4 +216,4 @@ As above however, the mask will come before the dictionary.
 
 **-a 7 ?d?d?d?d OxfordEnglish.txt** 
   
-Any queries with creating an attack please contact me and I can try help!
+**Any queries with creating an attack please contact me and I can try help!**
