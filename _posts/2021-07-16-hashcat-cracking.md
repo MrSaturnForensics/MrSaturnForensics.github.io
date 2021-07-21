@@ -132,8 +132,6 @@ This then created a **.txt** file containing the hash of an iOS 9 encrypted back
 This file was then copied over to the Hashcat root folder, and Hashcat was started, I then ran the following attack:
 
 **hashcat.exe -m 14700 Output.txt -a 0 rockyou.txt -w 3**
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/gR3zffq/ios5.png" alt="ios5" border="0" /></a>
   
 <a href="https://ibb.co/CnnQP2F"><img src="https://i.ibb.co/7GGKk4F/ios6.png" alt="ios6" border="0" /></a>
   
