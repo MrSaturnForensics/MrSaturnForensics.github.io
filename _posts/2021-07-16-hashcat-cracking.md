@@ -215,3 +215,5 @@ If you want to try every word in the English dictionary followed by 4 numbers, y
 As above however, the mask will come before the dictionary.
 
 **-a 7 ?d?d?d?d OxfordEnglish.txt** 
+  
+Any queries with creating an attack please contact me and I can try help!
