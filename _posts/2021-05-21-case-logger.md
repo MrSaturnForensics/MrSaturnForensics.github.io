@@ -24,6 +24,17 @@ I had considered how far this could potentially go, and what requirements would 
 
 ### The Code
 
+Initially I started by using the **logging** module, this would provide context in the command prompt and telling the user what is being processed. 
+**DFO_NAME** uses the **getpass** module, this pulls the name of the PC user, which will be used in a filename in **EXCEL_FILENAME**
+This uses the **datetime** module to pull the current time, and append it to the filename. 
+
+Following this, I set two hard limits for row's and hyperlinks per sheet, this would mean if the amount of entries exceed these values, it can stop or create a new sheet.
+
+_logging_ module defines functions and classes which implement a flexible event logging system for applications and libraries. 
+
+_getpass_ module returns the “login name” of the user.
+
+_datetime_ module supplies classes for manipulating dates and times.
 
 {% highlight javascript linenos %}
 logging.getLogger().setLevel(logging.INFO)
