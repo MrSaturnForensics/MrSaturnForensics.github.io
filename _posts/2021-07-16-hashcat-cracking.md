@@ -110,18 +110,11 @@ _**PBKDF2** is a cryptographic key derivation function, which is resistant to di
   
 Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest to largest):
   
-⦁	Rockyou.txt
-⦁	Realhuman_phill.txt
-⦁	Realuniq.lst
-⦁	Nummer_DB.top
-⦁	HashesOrg
-⦁	DCHTPassv1.0.txt
-⦁	Weakpass_2a
+Rockyou.txt, Realhuman_phill.txt, Realuniq.lst, Nummer_DB.top, HashesOrg, DCHTPassv1.0.txt, Weakpass_2a
 
 Here is a list of the recommended dictionaries to use on iOS 10 backups (smallest to largest):
   
-⦁	Rockyou.txt
-⦁	Realhuman_phill.txt
+Rockyou.txt, Realhuman_phill.txt
   
 Following the recovery of the **Manifest.plist**, I then used **itunes_backup2hashcat.pl** to extract the hash. This was run from a command prompt within the same folder as the file using the below:
   
