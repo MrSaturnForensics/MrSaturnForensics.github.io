@@ -109,6 +109,7 @@ _**PBKDF2** is a cryptographic key derivation function, which is resistant to di
 *Due to the iOS 10+ backup encryption method being so strong, do not use any advanced attack modes on it, as it will just take too long. Stick to smaller wordlists with more simple rules.
   
 Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest to largest):
+  
 ⦁	Rockyou.txt
 ⦁	Realhuman_phill.txt
 ⦁	Realuniq.lst
@@ -118,6 +119,7 @@ Here is a list of the recommended dictionaries to use on iOS 9 backups (smallest
 ⦁	Weakpass_2a
 
 Here is a list of the recommended dictionaries to use on iOS 10 backups (smallest to largest):
+  
 ⦁	Rockyou.txt
 ⦁	Realhuman_phill.txt
   
