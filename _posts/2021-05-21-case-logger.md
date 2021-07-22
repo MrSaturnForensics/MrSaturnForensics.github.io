@@ -29,8 +29,10 @@ I had considered how far this could potentially go, and what requirements would 
 logging.getLogger().setLevel(logging.INFO)
 
 INPUT_DIRECTORY = os.getcwd()  # Can be changed
-DFO_NAME = getpass.getuser()  # This is pulling the username of PC signed in
-EXCEL_FILENAME = f"{DFO_NAME}_Case File Index_{datetime.now().strftime('%d-%m-%Y_%H-%M-%S')}.xlsx"
+DFO_NAME = getpass.getuser()  # This is pulling the username of
+PC signed in
+EXCEL_FILENAME = f"{DFO_NAME}_Case File Index_{datetime.now()
+.strftime('%d-%m-%Y_%H-%M-%S')}.xlsx"
 
 # Dict with column names (in order) and column widths. "None" means the
 # width will be the max length of a value in that column
