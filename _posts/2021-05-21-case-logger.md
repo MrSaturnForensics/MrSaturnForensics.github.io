@@ -18,7 +18,28 @@ This could then be used in conjunction with another script I plan on creating wh
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
 - Log all files within directories from the location of the script
 - Pull Filename, Last Accessed Time and Directory Path
+- Hyperlink the Directory Path, meaning someone can click on it to jump to the file
 - Present this information in a **.xlsx** file
 
 
 ### The Code
+
+
+{% highlight javascript linenos %}
+logging.getLogger().setLevel(logging.INFO)
+
+INPUT_DIRECTORY = os.getcwd()  # Can be changed
+DFO_NAME = getpass.getuser()  # This is pulling the username of PC signed in
+EXCEL_FILENAME = f"{DFO_NAME}_Case File Index_{datetime.now().strftime('%d-%m-%Y_%H-%M-%S')}.xlsx"
+
+# Dict with column names (in order) and column widths. "None" means the
+# width will be the max length of a value in that column
+COLUMN_NAMES = {
+    'Filename': 60,
+    'Last Accessed Time': None,
+    'Full Path': 145,
+}
+
+EXCEL_ROW_LIMIT = 1_048_576
+HYPERLINK_LIMIT = 65_530
+{% endhighlight %}
