@@ -25,7 +25,7 @@ I had considered how far this could potentially go, and what requirements would 
 
 **Case Verify Script**
 - Compare two outputs of **Case Logger**
-- Determine deleted modified or created data from it
+- Determine deleted, modified or created data from comparing the outputs
 
 ### Case Logger Script
 
