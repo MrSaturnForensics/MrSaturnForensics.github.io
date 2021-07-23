@@ -124,4 +124,5 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
 {% endhighlight %}
 
 As shown below, the script when running locally is able to reach **12,180** files processed a second!
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/txyhQSG/ss-2021-07-23-at-09-08-41.png" alt="ss-2021-07-23-at-09-08-41" border="0" /></a>
