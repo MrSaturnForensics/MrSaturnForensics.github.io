@@ -8,7 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Hashcat, Password Cracking]
 ---
 
-Encryption and password locked application's are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
+Encryption and password locked applications are quite common to see in an investigation, and it is quite commonly dismissed as something that cannot be bypassed or accessed, I wanted to look at how some of most common encryption methods can be cracked using a password recovery tool.
 
 ### Password Hashes
 
@@ -21,7 +21,7 @@ However, unlike other encryption algorithms that transform data, hashing is diff
 The biggest problem with password hashing (or benefit in our case) is that if you run a specific word like 'green' through a hashing algorithm, the hashed outcome for that word will always be the same. 
 Meaning you could in theory guess millions of passwords, run them through the same algorithm, and then see what the hash for a specific password is.
 
-If you recover the hash of a password your trying to crack, using this method and comparing this against the hash will allow you to try find a matching hash, giving you the password.
+If you recover the hash of a password you're trying to crack, using this method and comparing this against the hash will allow you to try find a matching hash, giving you the password.
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/6YJ7Rbk/image.png" alt="image" border="0" /></a>
 
@@ -35,7 +35,7 @@ _**Brute-Force attacks**_ work by trial-and-error to find the correct password, 
 
 **If the device was encrypted using the User Password authentication method this will be possible.**
 
-**If using a smart code PIN to unlock the Bitlocker container, this method will ONLY return $2 and $3 hashes which are the recovery key hashes, and are far too complex to crack meaning it is highly unlikely to recover the key from them - (48 digits long).**
+**If using a smart code PIN to unlock the BitLocker container, this method will ONLY return $2 and $3 hashes which are the recovery key hashes, and are far too complex to crack meaning it is highly unlikely to recover the key from them - (48 digits long).**
 
 Initially I started by enabling BitLocker on a USB with a basic **.txt** file.
 
@@ -85,13 +85,13 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 
 **-a** represents the attack **0** being dictionary, trying all words in a list. **rockyou.txt** is the provided list of words to try crack and compare hashes for.
 
-**-r** represents the rule of the attack being **best64**, This means for every word in the dictionary, it will try 64 different variations of the word.
+**-r** represents the rule of the attack being **best64**, this means for every word in the dictionary, it will try 64 different variations of the word.
 
 **-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32). **This wasn't included as it isn't supported for this attack**.
 
 <a href="https://ibb.co/ch0F6r9"><img src="https://i.ibb.co/fdfpkxW/saturn.png" alt="saturn" border="0" /></a>
 
-This sucessfully recovered the passcode as **Saturn_1**. Following the attack using the rockyou dictionary, It used saturn.txt which contained the word "saturn" which was able to recover the password sucessfully. (You can also check the recovered password in the hashcat POTFILE)
+This successfully recovered the passcode as **Saturn_1**. Following the attack using the rockyou dictionary, It used saturn.txt which contained the word "saturn" which was able to recover the password. (You can also check the recovered password in the hashcat POTFILE)
 
 ### Cracking iTunes Encrypted Backup
 
