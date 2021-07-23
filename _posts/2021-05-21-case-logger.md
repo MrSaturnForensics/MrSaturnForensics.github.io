@@ -82,7 +82,7 @@ I then wrote another function which would obtain all files within a directory th
 
 There is also the ability to handle utf-8 files, decoding them so the information can be read. This will obtain the filename, last accessed time and directory path and save them to variables.
 
-_**os.walk**__ is part of the **os** module, it will follow each directory recursively until no further sub-directories are available from the initial directory that walk was called upon.
+_**os.walk**_ is part of the **os** module, it will follow each directory recursively until no further sub-directories are available from the initial directory that walk was called upon.
 
 _**tqdm**_ is a Extensible Progress Bar for Python and CLI.
 
