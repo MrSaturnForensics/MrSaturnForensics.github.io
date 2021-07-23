@@ -78,7 +78,9 @@ def file_last_accessed(filepath):
     return date
 {% endhighlight %}
 
-I then wrote another function which would obtain all files within a directory the script is ran from, and go down every subfolder, this was achieved using **os.walk**  I used a module called **tqdm** to provide a progress bar in the command prompt to show the progress of this action.
+I then wrote another function which would obtain all files within a directory the script is ran from, and go down every subfolder, this was achieved using **os.walk**.
+
+I also used a module called **tqdm** to provide a progress bar in the command prompt to show the progress of this action.
 
 There is also the ability to handle **UTF-8** files, decoding them so the information can be read. This will obtain the filename, last accessed time and directory path and save them to variables.
 
