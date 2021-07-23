@@ -30,11 +30,11 @@ This uses the **datetime** module to pull the current time, and append it to the
 
 Following this, I set values for the width of the columns, as well as two hard limits for row's and hyperlinks per sheet, this would mean if the amount of entries exceed these values, it will know to carry over to a new sheet.
 
-_logging_ module defines functions and classes which implement a flexible event logging system for applications and libraries. 
+_**logging**_ module defines functions and classes which implement a flexible event logging system for applications and libraries. 
 
-_getpass_ module returns the “login name” of the user.
+_**getpass**_ module returns the “login name” of the user.
 
-_datetime_ module supplies classes for manipulating dates and times.
+_**datetime**_ module supplies classes for manipulating dates and times.
 
 {% highlight javascript linenos %}
 logging.getLogger().setLevel(logging.INFO)
