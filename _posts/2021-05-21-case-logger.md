@@ -64,7 +64,7 @@ EXCEL_ROW_LIMIT = 1_048_576
 HYPERLINK_LIMIT = 65_530
 {% endhighlight %}
 
-I then wrote a function to obtain the last access time of a file, this would convert it into a readable timestamp, and handle an incorrect / missing date.
+I then wrote a function to obtain the last access time of a file, this would convert it into a readable timestamp, and handle an incorrect or missing date.
 
 {% highlight javascript linenos %}
 def file_last_accessed(filepath):
@@ -77,6 +77,12 @@ def file_last_accessed(filepath):
         date = datetime(1970, 1, 1) + timedelta(seconds=timestamp)
     return date
 {% endhighlight %}
+
+I then wrote another function which would obtain all files within a directory the script is ran from, and go down every subfolder, this was achieved using **os.walk**  I used a module called **tqdm** to provide a progress bar in the command prompt to show the process of this action - as it will be the main part of the script. 
+
+_**os.walk**__ is part of the **os** module, it will follow each directory recursively until no further sub-directories are available from the initial directory that walk was called upon.
+
+_**tqdm** is a Extensible Progress Bar for Python and CLI.
 
 {% highlight javascript linenos %}
 def list_files(directory, last_access=file_last_accessed):
