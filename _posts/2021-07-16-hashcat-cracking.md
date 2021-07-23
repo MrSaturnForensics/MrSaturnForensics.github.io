@@ -79,7 +79,7 @@ _5228e0843354c306ef9db2ddd3e0e0ee6b845cd413696c632ecbf179a_
 
 Now we can attempt to try recover the password, I opened hashcat in command prompt and then ran the following command:
 
-**hashcat.exe -m 22100 $bitlocker$0 (rest of hash redacted) -a 0 Wordlists\rockyou.txt -r rules\best64.rule -O**
+**hashcat.exe -m 22100 $bitlocker$0 (rest of hash redacted) -a 0 Wordlists\rockyou.txt Wordlists\saturn.txt -r rules\best64.rule -O**
 
 **-m** represents the type of hash being cracked, 22100 being BitLocker.
 
@@ -89,6 +89,9 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 
 **-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32).
 
+<a href="https://ibb.co/ch0F6r9"><img src="https://i.ibb.co/fdfpkxW/saturn.png" alt="saturn" border="0" /></a>
+
+This sucessfully recovered the passcode as **Saturn_1**. Following the attack using the rockyou dictionary, It used saturn.txt which contained the word "saturn" which was able to recover the password sucessfully.
 
 ### Cracking iTunes Encrypted Backup
 
