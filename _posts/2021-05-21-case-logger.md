@@ -7,7 +7,9 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation, Validation]
 ---
 
-Logging information on cases within Digital Forensics is important, ensuring as little tampering as possible of a case file after completion is part of the process of ensuring the integrity of evidence. Verifying information from a log in the case is also just as important, so I did my best to achieve both with a script.
+Logging information on cases within Digital Forensics is important, ensuring as little tampering as possible of a case file after completion is part of the process of ensuring the integrity of evidence. 
+
+Verifying information from a log in the case is also just as important, so I did my best to achieve both with a script.
 
 ### The Background
 My intention with this script was to create a way of verifying if a case has been edited or changed in any form after completion, and create an audit trail of every file present from the root of a case directory. 
