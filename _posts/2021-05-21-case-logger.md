@@ -84,7 +84,7 @@ There is also the ability to handle utf-8 files, decoding them so the informatio
 
 _**os.walk**_ is part of the **os** module, it will follow each directory recursively until no further sub-directories are available from the initial directory that walk was called upon.
 
-_**tqdm**_ is a Extensible Progress Bar for Python and CLI.
+_**tqdm**_ is a extensible progress bar for Python and CLI.
 
 _**UTF-8**_ is a variable-width character encoding
 
