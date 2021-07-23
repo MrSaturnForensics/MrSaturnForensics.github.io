@@ -88,7 +88,6 @@ def list_files(directory, last_access=file_last_accessed):
                 last_accessed = err
 
             yield file_basename, last_accessed, file_path
-            #file_id += 1
             progressbar.update()
     progressbar.close()
 {% endhighlight %}
