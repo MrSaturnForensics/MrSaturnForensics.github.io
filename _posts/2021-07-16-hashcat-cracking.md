@@ -79,7 +79,7 @@ _5228e0843354c306ef9db2ddd3e0e0ee6b845cd413696c632ecbf179a_
 
 Now we can attempt to try recover the password, I opened hashcat in command prompt and then ran the following command:
 
-**hashcat.exe -m 22100 $bitlocker$0 (rest of hash redacted) -a 0 Wordlists\rockyou.txt Wordlists\saturn.txt -r rules\best64.rule -O**
+**hashcat.exe -m 22100 $bitlocker$0 (rest of hash redacted) -a 0 Wordlists\rockyou.txt Wordlists\saturn.txt -r rules\best64.rule**
 
 **-m** represents the type of hash being cracked, 22100 being BitLocker.
 
@@ -87,7 +87,7 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 
 **-r** represents the rule of the attack being **best64**, This means for every word in the dictionary, it will try 64 different variations of the word.
 
-**-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32).
+**-O** represents the optimized kernel option. This configures hashcat to run faster, but at the cost of limited password length support (typically 32). **This wasn't included as it isn't supported for this attack**.
 
 <a href="https://ibb.co/ch0F6r9"><img src="https://i.ibb.co/fdfpkxW/saturn.png" alt="saturn" border="0" /></a>
 
