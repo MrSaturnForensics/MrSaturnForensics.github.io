@@ -91,7 +91,7 @@ Now we can attempt to try recover the password, I opened hashcat in command prom
 
 <a href="https://ibb.co/ch0F6r9"><img src="https://i.ibb.co/fdfpkxW/saturn.png" alt="saturn" border="0" /></a>
 
-This sucessfully recovered the passcode as **Saturn_1**. Following the attack using the rockyou dictionary, It used saturn.txt which contained the word "saturn" which was able to recover the password sucessfully.
+This sucessfully recovered the passcode as **Saturn_1**. Following the attack using the rockyou dictionary, It used saturn.txt which contained the word "saturn" which was able to recover the password sucessfully. (You can also check the recovered password in the hashcat POTFILE)
 
 ### Cracking iTunes Encrypted Backup
 
@@ -133,7 +133,7 @@ This file was then copied over to the Hashcat root folder, and Hashcat was start
   
 <a href="https://ibb.co/CnnQP2F"><img src="https://i.ibb.co/7GGKk4F/ios6.png" alt="ios6" border="0" /></a>
   
-This then recovered the password as **hashcat**. (You can also check the value in the hashcat POTFILE).
+This then recovered the password as **hashcat**. (You can also check the recovered password in the hashcat POTFILE).
 
 
 ### Hashcat Breakdown / Guide
