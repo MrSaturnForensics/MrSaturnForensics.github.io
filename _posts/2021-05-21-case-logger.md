@@ -75,7 +75,6 @@ def list_files(directory, last_access=file_last_accessed):
     """Recursively list all files in given directory and it's subdirectories."""
     logging.info("Starting file search...")
     progressbar = tqdm.tqdm(desc="Listing files", unit=' files')
-    #file_id = 1
     for currentpath, folders, files in os.walk(directory):
         for file_basename in files:
             # Line to try convert any UTF8 entries found.
