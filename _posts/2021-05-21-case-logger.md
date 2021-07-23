@@ -7,7 +7,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation, Validation]
 ---
 
-Logging information on cases within Digital Forensics is important, ensuring as little tampering as possible of a case file after completion is part of the process of ensuring the integrity of evidence.
+Logging information on cases within Digital Forensics is important, ensuring as little tampering as possible of a case file after completion is part of the process of ensuring the integrity of evidence. Verifying information from a log in the case is also just as important, so I did my best to achieve both with a script.
 
 ### The Background
 My intention with this script was to create a way of verifying if a case has been edited or changed in any form after completion, and create an audit trail of every file present from the root of a case directory. 
@@ -15,12 +15,19 @@ My intention with this script was to create a way of verifying if a case has bee
 This could then be used in conjunction with another script I plan on creating which will then compare two log files and highlight any differences between them, which could then be used as part of a peer review process to ensure integrity between the case file at different times.
 
 ### The Aim
-I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
+I had considered how far this could potentially go, and what requirements would be needed to allow for robust scripts:
+
+**Case Logger Script**
 - Log all files within directories from the location of the script
 - Pull Filename, Last Accessed Time and Directory Path
 - Hyperlink the Directory Path, meaning someone can click on it to jump to the file
 - Present this information in a **.xlsx** file
 
+**Case Verify Script**
+- Compare two outputs of **Case Logger**
+- Determine deleted modified or created data from it
+
+### Case Logger Script
 
 ### The Code
 
