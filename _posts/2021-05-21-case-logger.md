@@ -17,17 +17,18 @@ This could then be used in conjunction with another script I plan on creating wh
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for robust scripts:
 
-**Case Logger Script**
+**Case Logging Script**
 - Log all files within directories from the location of the script
 - Pull Filename, Last Accessed Time and Directory Path
 - Hyperlink the Directory Path, meaning someone can click on it to jump to the file
 - Present this information in a **.xlsx** file
 
-**Case Verify Script**
+**Case Verifying Script**
 - Compare two outputs of **Case Logger**
 - Determine deleted, modified or created data from comparing the outputs
 
-### Case Logger Script
+### Case Logging Script Breakdown
+
 
 ### The Code
 
