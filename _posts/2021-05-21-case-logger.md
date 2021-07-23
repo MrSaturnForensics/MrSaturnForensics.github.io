@@ -28,7 +28,7 @@ Initially I started by using the **logging** module, this would provide context 
 **DFO_NAME** uses the **getpass** module, this pulls the name of the PC user, which will be used in a filename in **EXCEL_FILENAME**
 This uses the **datetime** module to pull the current time, and append it to the filename. 
 
-Following this, I set two hard limits for row's and hyperlinks per sheet, this would mean if the amount of entries exceed these values, it can stop or create a new sheet.
+Following this, I set values for the width of the columns, as well as two hard limits for row's and hyperlinks per sheet, this would mean if the amount of entries exceed these values, it will know to carry over to a new sheet.
 
 _logging_ module defines functions and classes which implement a flexible event logging system for applications and libraries. 
 
@@ -54,4 +54,41 @@ COLUMN_NAMES = {
 
 EXCEL_ROW_LIMIT = 1_048_576
 HYPERLINK_LIMIT = 65_530
+{% endhighlight %}
+
+I then wrote a function to obtain the last access time of a file, this would convert it into a readable timestamp, and handle an incorrect / missing date.
+
+{% highlight javascript linenos %}
+def file_last_accessed(filepath):
+    """Get the last time a file was accessed as a python datetime object"""
+    timestamp = os.path.getmtime(filepath)
+    try:
+        date = datetime.fromtimestamp(timestamp)
+        date = date.strftime("%d/%m/%Y, %H:%M:%S")
+    except OSError:
+        date = datetime(1970, 1, 1) + timedelta(seconds=timestamp)
+    return date
+{% endhighlight %}
+
+{% highlight javascript linenos %}
+def list_files(directory, last_access=file_last_accessed):
+    """Recursively list all files in given directory and it's subdirectories."""
+    logging.info("Starting file search...")
+    progressbar = tqdm.tqdm(desc="Listing files", unit=' files')
+    #file_id = 1
+    for currentpath, folders, files in os.walk(directory):
+        for file_basename in files:
+            # Line to try convert any UTF8 entries found.
+            file_basename = file_basename.encode('utf8', 'replace').decode('utf8')
+            file_path = f"{currentpath}{os.sep}{file_basename}"
+
+            try:
+                last_accessed = last_access(file_path)
+            except Exception as err:
+                last_accessed = err
+
+            yield file_basename, last_accessed, file_path
+            #file_id += 1
+            progressbar.update()
+    progressbar.close()
 {% endhighlight %}
