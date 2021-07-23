@@ -88,7 +88,7 @@ _**os.walk**_ is part of the **os** module, it will follow each directory recurs
 
 _**tqdm**_ is a extensible progress bar for Python and CLI.
 
-_**UTF-8**_ is a variable-width character encoding
+_**UTF-8**_ is a variable-width character encoding.
 
 {% highlight javascript linenos %}
 def list_files(directory, last_access=file_last_accessed):
@@ -109,4 +109,13 @@ def list_files(directory, last_access=file_last_accessed):
             yield file_basename, last_accessed, file_path
             progressbar.update()
     progressbar.close()
+{% endhighlight %}
+
+Text here
+
+{% highlight javascript linenos %}
+def to_excel_hyperlink(source: str, espacefunc=escape):
+    """Puts a source in excel hyperlink formula."""
+    escaped = espacefunc(source)
+    return source if len(escaped) > 255 else f'=HYPERLINK("{escape(source)}")'
 {% endhighlight %}
