@@ -114,7 +114,7 @@ def list_files(directory, last_access=file_last_accessed):
     progressbar.close()
 {% endhighlight %}
 
-Text here
+Below is another function, which will allow entries to be put into a hyperlink formula automatically. If the source is over 255 characaters long, it will not hyperlink as this is over the limit in excel for doing so.
 
 {% highlight javascript linenos %}
 def to_excel_hyperlink(source: str, espacefunc=escape):
@@ -122,6 +122,27 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
     escaped = espacefunc(source)
     return source if len(escaped) > 255 else f'=HYPERLINK("{escape(source)}")'
 {% endhighlight %}
+
+
+
+{% highlight javascript linenos %}
+def calculate_col_widths(dataframe):
+    """Calculate the width for each column in dataframe."""
+    col_widths = {}
+    for column_name, value in COLUMN_NAMES.items():
+        if isinstance(value, int):
+            width = value
+        else:
+            # Find max length of a value in current column
+            longest_val: pd.Series = dataframe[column_name].astype(str).str.len().max()
+            # Max len of any value including col header
+            width = max(longest_val + 4, len(str(column_name))) + 2
+        col_widths[column_name] = width
+    return col_widths
+{% endhighlight %}
+
+
+
 
 As shown below, the script when running locally is able to reach **12,180** files processed a second!
 
