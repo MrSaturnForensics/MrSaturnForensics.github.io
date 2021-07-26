@@ -19,7 +19,7 @@ I had considered how far this could potentially go, and what requirements would 
 - Support imaging for memory card's, USB's, mechanical hard drives and SSD's
 - Carry out checks for HPO and DCA upon imaging, and warn the user
 - Carry out checks for hash errors or bad sectors, and warn the user
-- Automatically fill in case details with little user input just from a given directory path
+- Automatically fill in case details from a given directory path to get case data
 - Create a log file of all user input's and the processes done
 - Alert the user processing has finished
 
