@@ -17,7 +17,7 @@ Within my current and previous workplaces, imaging has been done through the use
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
 - Detect a new device connected after the script is ran, acknowledging something new is connected for imaging
 - Support imaging for memory card's, USB's, mechanical hard drives and SSD's
-- Carry out checks for HPO / DCA upon imaging, and warn the user
+- Carry out checks for HPO and DCA upon imaging, and warn the user
 - Carry out checks for hash errors or bad sectors, and warn the user
 - Automatically fill in case details with little user input just from a given directory path
 - Create a log file of all user input's and the processes done
