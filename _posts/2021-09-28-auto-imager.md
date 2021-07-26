@@ -8,9 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
 
-Inital text
-
-As a start to this blog, I intended to make my life slightly easier, via creating a simple Python script which would allow the renaming of files based on the parent directories present within a folder structure. In laymans terms, case structures tend to include both the case reference and exhibit reference, with the Photographs being included within this folder chain. Based on this I can assume a structure for a a filename of a photograph, and create a script which can fill in this information. 
+I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved., so I looked into a repetitive task carried out on a regular basis, Imaging.
 
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
