@@ -31,7 +31,6 @@ I had considered how far this could potentially go, and what requirements would 
 
 ### Case Logging Script Breakdown
 
-
 ### The Code
 
 Initially I started by using the **logging** module, this would provide context in the command prompt and telling the user what is being processed. 
@@ -67,6 +66,8 @@ EXCEL_ROW_LIMIT = 1_048_576
 HYPERLINK_LIMIT = 65_530
 {% endhighlight %}
 
+### Last Accessed Time
+
 I then wrote a function to obtain the last access time of a file, this would convert it into a readable timestamp, and handle an incorrect or missing date.
 
 {% highlight javascript linenos %}
@@ -80,6 +81,8 @@ def file_last_accessed(filepath):
         date = datetime(1970, 1, 1) + timedelta(seconds=timestamp)
     return date
 {% endhighlight %}
+
+### Navigating Folders
 
 I then wrote another function which would obtain all files within a directory the script is ran from, and go down every subfolder, this was achieved using **os.walk**.
 
@@ -114,6 +117,8 @@ def list_files(directory, last_access=file_last_accessed):
     progressbar.close()
 {% endhighlight %}
 
+### Hyperlinks
+
 Below is another function, which will allow entries to be put into a hyperlink formula automatically. If the source filepath is over 255 characaters long, it will not hyperlink as this is over the limit in excel for a hyperlink.
 
 {% highlight javascript linenos %}
@@ -124,6 +129,9 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
 {% endhighlight %}
 
 
+### Column Widths
+
+Test
 
 {% highlight javascript linenos %}
 def calculate_col_widths(dataframe):
@@ -140,7 +148,6 @@ def calculate_col_widths(dataframe):
         col_widths[column_name] = width
     return col_widths
 {% endhighlight %}
-
 
 
 
