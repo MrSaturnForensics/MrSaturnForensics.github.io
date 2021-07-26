@@ -11,7 +11,7 @@ tags: [Python, Scripting, Automation]
 I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved, so I looked into a repetitive task carried out on a regular basis in cases, Imaging.
 
 ### The Background
-Within my current and previous workplaces, imaging has been done through the use of **FTKImager** which has been seen as a standard tool, mainly used to image memory card's, USB's and hard drives. The process of imaging tends to be very repetitive, with little change in the options selected, because of this I felt as though potentially automating the imaging process would be ideal.
+Within my current and previous workplaces, imaging has been done through the use of **FTKImager** which has been seen as a standard tool, with FTK being mainly used to image memory card's, USB's and hard drives. The process of imaging tends to be very repetitive, with little change in the options selected, because of this I felt as though potentially automating the imaging process would be ideal.
 
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
