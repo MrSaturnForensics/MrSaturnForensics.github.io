@@ -8,7 +8,7 @@ share-img: /assets/img/computer-screen-monitor-text.jpg
 tags: [Python, Scripting, Automation]
 ---
 
-I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved., so I looked into a repetitive task carried out on a regular basis, Imaging.
+I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved, so I looked into a repetitive task carried out on a regular basis in cases, Imaging.
 
 ### The Background
 Within my current and previous workplaces, the case creation has normally involved just manually copying a template folder or running a batch script and changing what is necessary, as well as creating each set of folders for each exhibit type manually. My goal would be to make this as user friendly as possible, creating all of the files needed and structure without having to copy in or run multiple scripts, while also offering the ability to add some template keywords and some fail-safes to stop any overwritting of data.
