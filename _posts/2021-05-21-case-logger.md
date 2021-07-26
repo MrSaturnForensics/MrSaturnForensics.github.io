@@ -114,7 +114,7 @@ def list_files(directory, last_access=file_last_accessed):
     progressbar.close()
 {% endhighlight %}
 
-Below is another function, which will allow entries to be put into a hyperlink formula automatically. If the source is over 255 characaters long, it will not hyperlink as this is over the limit in excel for a hyperlink.
+Below is another function, which will allow entries to be put into a hyperlink formula automatically. If the source filepath is over 255 characaters long, it will not hyperlink as this is over the limit in excel for a hyperlink.
 
 {% highlight javascript linenos %}
 def to_excel_hyperlink(source: str, espacefunc=escape):
