@@ -130,8 +130,11 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
 
 
 ### Column Widths
-
 Test
+
+_**Pandas**_ is a data analysis and manipulation module.
+
+_**Dataframe**_ is a 2-dimensional labeled data structure with columns of potentially different types. You can think of it like a spreadsheet or SQL table.
 
 {% highlight javascript linenos %}
 def calculate_col_widths(dataframe):
