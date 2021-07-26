@@ -11,9 +11,15 @@ tags: [Python, Scripting, Automation]
 I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved, so I looked into a repetitive task carried out on a regular basis in cases, Imaging.
 
 ### The Background
-Within my current and previous workplaces, the case creation has normally involved just manually copying a template folder or running a batch script and changing what is necessary, as well as creating each set of folders for each exhibit type manually. My goal would be to make this as user friendly as possible, creating all of the files needed and structure without having to copy in or run multiple scripts, while also offering the ability to add some template keywords and some fail-safes to stop any overwritting of data.
+Within my current and previous workplaces, imaging has been done through the use of **FTKImager** which has been seen as a standard tool, mainly used to image memory card's, USB's and hard drives. The process of imaging tends to be very repetitive, with little change in the options selected, because of this I felt as though potentially automating the imaging process would be ideal.
 
 ### The Aim
 I had considered how far this could potentially go, and what requirements would be needed to allow for a robust script:
-- Select where the case file is saved from numerous defined locations
+- Detect a new device connected after the script is ran, acknowledging something new is connected for imaging
+- Support imaging for memory card's, USB's, mechanical hard drives and SSD's
+- Carry out checks for HPO / DCA upon imaging, and warn the user
+- Carry out checks for hash errors or bad sectors, and warn the user
+- Automatically fill in case details with little user input just from a given directory path
+- Create a log file of all user input's and the processes done
+- Alert the user processing has finished
 
