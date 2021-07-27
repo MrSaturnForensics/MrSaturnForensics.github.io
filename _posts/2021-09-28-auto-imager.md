@@ -24,12 +24,13 @@ I had considered how far this could potentially go, and what requirements would 
 - Alert the user processing has finished
 
 ### The Code
+
+### Directory Path
 {% highlight javascript linenos %}
 root = Tk()
 root.eval('tk::PlaceWindow . center')
 root.withdraw()
 
-### Directory Path
 def get_save_directory():
     """Ask user for the directory where image files will be saved to."""
     while True:
