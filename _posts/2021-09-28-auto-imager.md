@@ -24,4 +24,33 @@ I had considered how far this could potentially go, and what requirements would 
 - Alert the user processing has finished
 
 ### The Code
+root = Tk()
+root.eval('tk::PlaceWindow . center')
+root.withdraw()
 
+def get_save_directory():
+    """Ask user for the directory where reports will be saved to."""
+    while True:
+        working_directory = Path.cwd().absolute()
+
+        save_directory = Path(
+            filedialog.askdirectory(
+                initialdir=str(working_directory),
+                title="Save under Exhibit Imaging Folder"
+            )
+        )
+        # Check to make sure 2 directories up is called "Image Files"
+        image_files = Path(save_directory)
+        image_file_check = image_files.parents[0].stem
+
+        if not image_file_check == "Image Files":
+            tkinter.messagebox.showerror(title="Incorrect Location Selected", message="Error, please select specific exhibit imaging folder",) 
+        else:            
+            break
+    
+    if not save_directory:
+        sys.exit()  # Exit if cancel is pressed
+    else:
+        return Path(save_directory)
+        
+save_dir = get_save_directory()
