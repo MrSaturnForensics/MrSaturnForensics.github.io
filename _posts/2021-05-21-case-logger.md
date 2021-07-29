@@ -130,7 +130,7 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
 
 
 ### Column Widths
-Test
+Following this, I then created a function which would take the length of the max entry in each column and adjust the size accordingly to the biggest entry.
 
 _**Pandas**_ is a data analysis and manipulation module.
 
