@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Password Cracking With Hashcat
-subtitle: Cracking BitLocker & iOS iTunes Encrypted Backups
+subtitle: Cracking BitLocker, iOS iTunes Encrypted Backups, Veracrypt & Truecrypt
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/hashcat.PNG
 share-img: /assets/img/computer-screen-monitor-text.jpg
