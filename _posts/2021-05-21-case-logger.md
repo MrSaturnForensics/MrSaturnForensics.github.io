@@ -130,6 +130,7 @@ def to_excel_hyperlink(source: str, espacefunc=escape):
 
 
 ### Column Widths
+
 Following this, I then created a function which would take the length of the max entry in each column and adjust the size accordingly to the biggest entry.
 
 _**Pandas**_ is a data analysis and manipulation module.
@@ -152,7 +153,17 @@ def calculate_col_widths(dataframe):
     return col_widths
 {% endhighlight %}
 
+### Worksheets
 
+Using the **math** module, i then created a function which will work out how many worksheets the data may need to be spread over.
+
+{% highlight javascript linenos %}
+def get_worksheet_count(dataframe, chunk_size):
+    """Get the number of worksheets needed to write `dataframe` into it."""
+    total_rows = dataframe.shape[0]
+    worksheet_count = math.ceil(total_rows / chunk_size)
+    return worksheet_count
+{% endhighlight %}
 
 As shown below, the script when running locally is able to reach **12,180** files processed a second!
 
