@@ -26,6 +26,8 @@ I had considered how far this could potentially go, and what requirements would 
 ### The Code
 
 ### Directory Path
+This function will ask the user for the file path for the image files, it has a built in check to verify that the folder directory above is called "Image Files", prompting the user to select the right area.
+
 {% highlight javascript linenos %}
 root = Tk()
 root.eval('tk::PlaceWindow . center')
