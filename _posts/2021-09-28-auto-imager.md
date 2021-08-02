@@ -68,7 +68,7 @@ save_dir = get_save_directory()
 The following lines then build the filename of an automation log which will keep track of the input's present in the command prompt for audit trail purposes.
 It appends the current date and time into the filename so it can be seen exactly when the script was ran, it then appends each line and input the user put's into the .txt file.
 
-The way to deal with media being connected with no file system is through the use of a module called **win32com** this allows me to check on the amount of devices present inside "Device Manager", stored under the variable **wmi.InstancesOf("Win32_USBHub)**, I carried out a **Len()** check on this, once a new device has been connected, the amount should increase by 1, giving us a way to determine if something new is recognised.
+The way to deal with media being connected with no file system is through the use of a module called **win32com** this allows me to check on the amount of devices present inside "Device Manager" on the computer the script is ran on. This is stored under the variable **wmi.InstancesOf("Win32_USBHub)**, I carried out a **Len()** check on this, once a new device has been connected, the amount should increase by 1, giving us a way to determine if something new is recognised. I could then build in functionality to get the user to check if the amount has not increased.
 
 _**win32com**_ is a module which provides access to many of the Windows APIs from Python.
 
