@@ -70,6 +70,10 @@ It appends the current date and time into the filename so it can be seen exactly
 
 The way to deal with media being connected with no file system is through the use of a module called **win32com** this allows me to check on the amount of devices present inside "Device Manager", stored under the variable **wmi.InstancesOf("Win32_USBHub)**, I carried out a **Len()** check on this, once a new device has been connected, the amount should increase by 1, giving us a way to determine if something new is recognised.
 
+_**win32com**_ is a module which provides access to many of the Windows APIs from Python.
+
+_**len()**_ function returns the number of items in an object.
+
 
 {% highlight javascript linenos %}
 # Get the current date and time
