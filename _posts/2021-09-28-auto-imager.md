@@ -174,7 +174,8 @@ def get_source_type():
 
 ### Fixing a limitation of PyAutoGUI!
 
-Text
+The following function is used to swap between the data types depending on the state of the CAPS LOCK being ON or OFF. 
+This was necessary as **PyAutoGUI** was putting the input's into text fields in either upper case or lowercase, using this function ensures that no matter the state, the input will always be in capital letters. This will be used by appending **fix_case** to the variable.
 
 {% highlight javascript linenos %}
 def fix_case(to_swap):
