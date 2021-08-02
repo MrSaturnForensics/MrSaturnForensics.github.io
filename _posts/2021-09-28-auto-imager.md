@@ -99,7 +99,7 @@ if amount_of_devices >= amount_of_devices_after:
     print("No new device found, please check it is inserted correctly then press ENTER")
     logging.info("No new device found, please check it is inserted correctly then press ENTER")
 
-    # If drive isn't detected after this time, give it longer and check again
+    # If drive isnt detected after this time, give it longer and check again
     input()
     time.sleep(15)
     amount_of_devices_after = len(wmi.InstancesOf("Win32_USBHub"))
