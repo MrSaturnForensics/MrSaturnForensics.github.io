@@ -62,3 +62,68 @@ def get_save_directory():
         
 save_dir = get_save_directory()
 {% endhighlight %}
+
+### Automation Log File & Verifying a new device
+
+{% highlight javascript linenos %}
+# Get the current date and time
+now = datetime.datetime.now()
+
+LOG_FILE_NAME = "Automation log_" + str(now.strftime("%d-%m-%Y_%H-%M-%S") + ".txt")
+
+# Create and start a log file
+logging.basicConfig(filename=save_dir / LOG_FILE_NAME,
+                    format='%(asctime)s %(message)s',
+                    level=logging.DEBUG)
+logging.info('** PROCESSING STARTED **')
+
+# Checking Device Manager for devices, this will help us determine if the
+# connected media has a file system. Entries will be counted and compared
+# to allow for if a new one is found
+
+# Checking using a length check and prompting user to connect new device
+wmi = win32com.client.GetObject("winmgmts:")
+amount_of_devices = len(wmi.InstancesOf("Win32_USBHub"))
+amount_of_devices = int(amount_of_devices)
+amount_verification = input("Please connect device for imaging then press ENTER")
+print("Finding new device connected...")
+
+# Give time for it to be recognised, and compare if entry amount changed
+time.sleep(20)
+amount_of_devices_after = len(wmi.InstancesOf("Win32_USBHub"))
+amount_of_devices_after = int(amount_of_devices_after)
+
+if amount_of_devices >= amount_of_devices_after:
+
+    # If amount is equal, no new drive has been detected
+    print("No new device found, please check it is inserted correctly then press ENTER")
+    logging.info("No new device found, please check it is inserted correctly then press ENTER")
+
+    # If drive isn't detected after this time, give it longer and check again
+    input()
+    time.sleep(15)
+    amount_of_devices_after = len(wmi.InstancesOf("Win32_USBHub"))
+    amount_of_devices_after = int(amount_of_devices_after)
+
+    if amount_of_devices >= amount_of_devices_after:
+        print("Device still not found, review if file system is present / picked up on file explorer")
+        print("If the device is showing in file explorer, disconnect and restart script")
+
+        logging.info("Device still not found, review if file system is present / picked up on file explorer")
+        logging.info("If the device is showing in file explorer, disconnect and restart script")
+        logging.info('** PROCESSING UNSUCCESSFUL / UNABLE TO DETECT DEVICE **')
+        input()
+        quit()
+
+    else:
+        print("Device Found - No issues")
+        logging.info("Device Found - No issues")
+        print()
+
+else:
+    print("Device Found - No issues")
+    logging.info("Device Found - No issues")
+    print()
+
+{% endhighlight %}
+    
