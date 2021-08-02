@@ -172,7 +172,7 @@ def get_source_type():
             logging.info("Invalid input, please select again")
 {% endhighlight %}
 
-### Fixing a limitation!
+### Fixing a limitation of PyAutoGUI!
 
 Text
 
