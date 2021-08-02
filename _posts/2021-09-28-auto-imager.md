@@ -138,4 +138,36 @@ else:
     print()
 
 {% endhighlight %}
-    
+
+### Exhibit Type
+
+
+
+{% highlight javascript linenos %}
+def get_source_type():
+    """Ask the user for the type of what is being imaged."""
+
+    while True:
+        print("Press 'M' for Memory Card, 'U' for USB, 'H' for Hard Drive")
+        logging.info("Press 'M' for Memory Card, 'U' for USB, 'H' for Hard Drive")
+        exhibit_type = input()
+        logging.info(exhibit_type)
+
+        # Memory Card Processing Starts
+        if exhibit_type in 'mM':
+            return 'M'
+
+        # USB Processing Starts
+        elif exhibit_type in 'uU':
+            return 'U'
+
+        # Hard Drive Processing Starts
+        elif exhibit_type in 'hH':
+            return 'H'
+        
+
+        # User did not input any of these, loop again until they do
+        else:
+            print("Invalid input, please select again")
+            logging.info("Invalid input, please select again")
+{% endhighlight %}
