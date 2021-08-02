@@ -171,3 +171,22 @@ def get_source_type():
             print("Invalid input, please select again")
             logging.info("Invalid input, please select again")
 {% endhighlight %}
+
+### Fixing a limitation!
+
+Text
+
+{% highlight javascript linenos %}
+def fix_case(to_swap):
+    """
+    Swaps case of letters in pathlib path or in a string IF CAPSLOCK IS ON
+    Output type stays as Pathlib object if input was a Pathlib object.
+    Otherwise returns a string.
+    """
+    if GetKeyState(VK_CAPITAL) == 1:
+        if isinstance(to_swap, Path):
+            return Path(str(to_swap).swapcase())
+        else:
+            return str(to_swap).swapcase()
+    return to_swap
+ {% endhighlight %}
