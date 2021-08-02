@@ -141,7 +141,7 @@ else:
 
 ### Exhibit Type
 
-
+This function will store the value of what the user inputs, this will be used for a different filename, and a potential different path for imaging that exhibit type, it will loop infinitely until the user selects an input displayed.
 
 {% highlight javascript linenos %}
 def get_source_type():
