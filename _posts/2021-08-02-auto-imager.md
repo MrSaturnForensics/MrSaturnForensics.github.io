@@ -294,3 +294,30 @@ class Filenames:
 ### Navigating Tableau Imager and FTKImager
 This is the bit I cannot show as it's very specific to my current workplace, however the idea behind it is **PyAutoGUI** provides the ability to use hotkeys and shortcuts, using a combination of these and some screen searching methods, This navigates the software! If you would like more specific details around this please contact me and I can help.
 
+
+### HPA & DCO Check
+
+Test
+
+{% highlight javascript linenos %}
+hard_drive_patterns = 'HPA in Use: Yes', 'DCO in Use: Yes'
+
+with open(str(Filenames.Tableau_filepath)) as file:
+    HPA_DCO_check = file.read()
+
+for pattern in hard_drive_patterns:
+    # If match, issue exit out program and warn DFO on screen
+    # Terminate program / place a warning in folder
+    if re.search(pattern, HPA_DCO_check):
+        open('HPA OR DCO ACTIVE.txt', 'w').close()
+        print('HPA OR DCO IN USE PLEASE EXAMINE MANUALLY')
+        logging.info('HPA OR DCO IN USE PLEASE EXAMINE MANUALLY')
+        input()
+        sys.exit()
+
+    else:  # Carry on if no issues
+        print()
+
+print('HPA / DCO not in use -  No issues')
+logging.info('HPA / DCO not in use -  No issues')
+{% endhighlight %}
