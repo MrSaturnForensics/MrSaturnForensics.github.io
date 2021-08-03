@@ -223,7 +223,7 @@ class Filenames:
         case_ref = save_dir.parents[2].name  # Case Reference from dir name
         exhibit_ref = save_dir.parents[1].name  # Exhibit Reference from dir name
         
-    # Ask if it's a hard drive or SSD if "H" is selected then store this for use later
+    # Ask if its a hard drive or SSD if "H" is selected then store this for use later
     if exhibit_type == "H":
         while True:
             print("Press 'H' for Hard Drive or 'S' for SSD")
