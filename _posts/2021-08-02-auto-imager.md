@@ -299,7 +299,11 @@ This is the bit I cannot show as it's very specific to my current workplace, how
 
 ### HPA & DCO Check
 
-Test
+To test for HPA & DCO being present on a drive was a fairly straightforward process, **Tableau Imager** will include this within the .txt file created when the device details are looked at, so before **FTKImager** is opened, the .txt is checked to see if **HPA in Use: Yes', 'DCO in Use: Yes** is present inside the file, this was done using the **regex** module, using a pattern search of that string, if it is found - the script will stop and warn the examiner of the issue.
+
+The _**regex**_ module lets you check if a particular string matches a given regular expression.
+
+A _**regular expression**_ (shortened as "regex") are special strings representing a pattern to be matched in a search operation. 
 
 {% highlight javascript linenos %}
 hard_drive_patterns = 'HPA in Use: Yes', 'DCO in Use: Yes'
