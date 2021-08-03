@@ -292,7 +292,9 @@ class Filenames:
   {% endhighlight %}
 
 ### Navigating Tableau Imager and FTKImager
-This is the bit I cannot show as it's very specific to my current workplace, however the idea behind it is **PyAutoGUI** provides the ability to use hotkeys and shortcuts, using a combination of these and some screen searching methods, This navigates the software! If you would like more specific details around this please contact me and I can help.
+This is the bit I cannot show as it's very specific to my current workplace, however the idea behind it is **PyAutoGUI** provides the ability to use hotkeys and shortcuts, using a combination of these and some screen searching methods, This navigates the software! 
+
+**If you would like more specific details around this please contact me and I can help**.
 
 
 ### HPA & DCO Check
