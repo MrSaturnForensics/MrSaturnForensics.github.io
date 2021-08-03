@@ -199,9 +199,15 @@ def fix_case(to_swap):
     return to_swap
  {% endhighlight %}
 
-### Test
+### Filenames, Directories and Capital Letters Fix
 
-Test
+I then created a class which would deal with the possible outputs for filenames and file paths depending on the **exhibit_type**, depending on the input, it will build a filename based on a different set of paths, as the Computer path has one less directory between the case reference and image location.
+
+This is also where the option for an SSD image is, if selected it gives the user a more frequent warning to turn off the connection as soon as imaging completes as SSD's use trimming and garbage collection, which can potentially delete cached data.
+
+This is also where the **fix_case** function is applied to the variables that contain the strings to be written into FTKImager.
+
+A _**Class**_  is a way of grouping functions.
 
 {% highlight javascript linenos %}
 class Filenames:
@@ -284,3 +290,7 @@ class Filenames:
     Tableau_filename_capsfix = fix_case(Tableau_filename)
     save_dir_capsfix = fix_case(save_dir)
   {% endhighlight %}
+
+### Navigating Tableau Imager and FTKImager
+This is the bit I cannot show as it's very specific to my current workplace, however the idea behind it is **PyAutoGUI** provides the ability to use hotkeys and shortcuts, using a combination of these and some screen searching methods, This navigates the software! If you would like more specific details around this please contact me and I can help.
+
