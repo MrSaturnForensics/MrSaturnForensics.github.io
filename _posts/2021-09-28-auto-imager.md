@@ -198,3 +198,89 @@ def fix_case(to_swap):
             return str(to_swap).swapcase()
     return to_swap
  {% endhighlight %}
+
+### Test
+
+Test
+
+{% highlight javascript linenos %}
+class Filenames:
+    """
+    A class that stores filename parts and full filenames and filepaths
+    Variable :case_ref: can be accessed through :Pathstore.case_ref:
+    and :save_dir: through :Pathstore.save_dir:, for example.
+    """
+    DFO_name = input("Please Enter DFO Name: ")
+    logging.info(DFO_name)
+    source_type = get_source_type()
+    exhibit_type = source_type
+
+    case_ref = save_dir.parents[3].name  # Case Reference from dir name
+    exhibit_ref = save_dir.parents[2].name  # Exhibit Reference from dir name
+
+    # Changing for "PC" case folder structure, as it differs
+    if exhibit_type == "H" or exhibit_type == "U":
+        case_ref = save_dir.parents[2].name  # Case Reference from dir name
+        exhibit_ref = save_dir.parents[1].name  # Exhibit Reference from dir name
+        
+    # Ask if it's a hard drive or SSD if "H" is selected then store this for use later
+    if exhibit_type == "H":
+        while True:
+            print("Press 'H' for Hard Drive or 'S' for SSD")
+            logging.info("Press 'H' for Hard Drive or 'S' for SSD")
+            global pc_type
+            pc_type = input()
+            logging.info(pc_type)
+
+            # Store as hard drive
+            if pc_type == "h" or pc_type == "H":
+                break
+
+            # Store as SSD
+            elif pc_type == "s" or pc_type == "S":
+                break
+
+            # User did not input any of these, loop again until they do
+            else:
+                print("Invalid input, please select again")
+                logging.info("Invalid input, please select again")
+                
+        
+    # Check for phone structure, if not change memory card filename for PC structure
+    image_files = Path(save_dir)
+    phone_structure_check = image_files.parents[1].stem    
+    if not phone_structure_check == "Memory Card":
+        case_ref = save_dir.parents[2].name  # Case Reference from dir name
+        exhibit_ref = save_dir.parents[1].name  # Exhibit Reference from dir name    
+         
+    # Find first unreserved suffix for new reports
+    suffix = 1
+    _log_filename = f"{case_ref}_{exhibit_ref}_{source_type}{{suffix}}.E01.txt"
+    while True:
+        FTK_log_filename = Path(_log_filename.format(suffix=suffix))
+        if save_dir.joinpath(FTK_log_filename).exists():  # Add one to suffix and test again
+            suffix += 1
+        else:  # Unreserved log filename is now stored in the variable :log_filename:
+            break
+
+    FTK_filename = Path(f"{case_ref}_{exhibit_ref}_{source_type}{suffix}")
+    FTK_filename_txt = Path(f"{case_ref}_{exhibit_ref}_{source_type}{suffix}.E01.txt")
+    FTK_filepath = save_dir / FTK_filename
+    FTK_filepath_txt = save_dir / FTK_filename_txt
+
+    Tableau_filename = Path(f"{case_ref}_{exhibit_ref}_{source_type}{suffix}_Tableau.txt")
+    Tableau_filepath = save_dir / Tableau_filename
+
+    exhibit_and_suffix = f"{exhibit_ref}_{source_type}{suffix}"
+
+    # Pyautogui types strings using capslock.
+    # If capslock is on, the typed letters case is inverted.
+    # When giving a string for pyautogui to write, the string should be case
+    # swapped if capslock is on. Function :fix_case: will do this automatically.
+    case_ref_capsfix = fix_case(case_ref)
+    exhibit_and_suffix_capsfix = fix_case(exhibit_and_suffix)
+    DFO_name_capsfix = fix_case(DFO_name)
+    FTK_filename_capsfix = fix_case(FTK_filename)
+    Tableau_filename_capsfix = fix_case(Tableau_filename)
+    save_dir_capsfix = fix_case(save_dir)
+  {% endhighlight %}
