@@ -5,7 +5,7 @@ subtitle: Using FTKImager and Tableau Imager
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/ftk.png
 share-img: /assets/img/computer-screen-monitor-text.jpg
-streamableId: hy4157
+streamableId: 5nuigx
 tags: [Python, Scripting, Automation]
 ---
 
