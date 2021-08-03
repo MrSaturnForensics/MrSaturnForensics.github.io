@@ -14,6 +14,7 @@ tags: [Python, Scripting, Automation]
 I wanted to see how easy automation would be within Digital Forensics and what level of automatic processing can be achieved, so I looked into a repetitive task carried out on a regular basis in cases, Imaging.
 
 ### Video Demonstration
+
 {% include streamablePlayer.html id=page.streamableId %}
 
 ### The Background
