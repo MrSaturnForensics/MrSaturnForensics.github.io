@@ -327,7 +327,7 @@ print('HPA / DCO not in use -  No issues')
 logging.info('HPA / DCO not in use -  No issues')
 {% endhighlight %}
 
-### Compression Check
+ Compression Check
 
 Test
 
