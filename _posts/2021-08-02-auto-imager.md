@@ -379,6 +379,7 @@ while True:
         # What to do if "try" part does not fail, which in this case means that the file exists
         if required_text in ftk_file_text:
             break 
+            
        # What to do if SSD, break out of verification and warn DFO to disconnect with confirmation
         elif pc_type == "S" or pc_type == "s":
             frequency = 2500  # Set Frequency To 2500 Hertz
@@ -388,6 +389,7 @@ while True:
             logging.info('SSD IMAGING IS NOW BEING VERIFIED, PLEASE DISCONNECT SSD AND PRESS ENTER')
             input()
             break
+            
         # Else still awaiting for the verification
         print("Waiting for E01 Verification to complete")
         time.sleep(30)
