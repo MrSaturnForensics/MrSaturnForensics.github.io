@@ -392,7 +392,7 @@ while True:
         time.sleep(30)
  {% endhighlight %}
   
- ### Bad Sector Check & Script End
+### Bad Sector Check 
  
  test
  
