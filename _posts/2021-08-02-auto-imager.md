@@ -296,7 +296,6 @@ This is the bit I cannot show as it's very specific to my current workplace, how
 
 **If you would like more specific details around this please contact me and I can help**.
 
-
 ### HPA & DCO Check
 
 To test for HPA & DCO being present on a drive was a fairly straightforward process, **Tableau Imager** will include this within the .txt file created when the device details are looked at, so before **FTKImager** is opened, the .txt is checked to see if _HPA in Use: Yes', 'DCO in Use: Yes_ is present inside the file, this was done using the **regex** module, using a pattern search of that string, if it is found - the script will stop and warn the examiner of the issue.
@@ -360,6 +359,7 @@ if exhibit_size > 268435318561:
  {% endhighlight %}
 
 ### Imaging Completion Check & SSD Check
+### Compression Check
 
 test
 
