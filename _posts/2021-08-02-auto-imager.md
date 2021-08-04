@@ -359,7 +359,6 @@ if exhibit_size > 268435318561:
  {% endhighlight %}
 
 ### Imaging Completion Check & SSD Check
-### Compression Check
 
 test
 
@@ -396,6 +395,7 @@ while True:
  {% endhighlight %}
  
  ### Bad Sector Check & Script End
+ ### Compression Check
  
  test
  
