@@ -358,3 +358,74 @@ if exhibit_size <= 268435318561:
 if exhibit_size > 268435318561:
     exhibit_size = 9
  {% endhighlight %}
+
+### Imaging Completion Check & SSD Check
+
+test
+
+{% highlight javascript linenos %}
+required_text = 'Image Verification Results:'
+while True:
+    try:
+        # Try to do something like open a file
+        with open(str(Filenames.FTK_filepath_txt)) as file:
+            ftk_file_text = file.read()
+    # Except some error
+    except FileNotFoundError:
+        # What to do if what inside the "try" part fails with this error.
+        print("Waiting for E01 Image to be created")
+        time.sleep(60)
+    else:
+        # What to do if "try" part does not fail, which in this case means that the file exists
+        if required_text in ftk_file_text:
+            break
+        
+        # What to do if SSD, break out of verification and warn DFO to disconnect with confirmation
+        elif pc_type == "S" or pc_type == "s":
+            frequency = 2500  # Set Frequency To 2500 Hertz
+            duration = 1000  # Set Duration To 1000 ms == 1 second
+            winsound.Beep(frequency, duration)
+            
+            print('SSD IMAGING IS NOW BEING VERIFIED, PLEASE DISCONNECT SSD AND PRESS ENTER')
+            logging.info('SSD IMAGING IS NOW BEING VERIFIED, PLEASE DISCONNECT SSD AND PRESS ENTER')
+            input()
+            break
+        # Else still awaiting for the verification
+        print("Waiting for E01 Verification to complete")
+        time.sleep(30)
+ {% endhighlight %}
+ 
+ ### Bad Sector Check & Script End
+ 
+ test
+ 
+{% highlight javascript linenos %}
+# String of text to search for / input data
+patterns = ['source drive could not be read:']
+
+for pattern in patterns:
+    # If hash issue exit out program and warn DFO in 2 ways
+    # Terminate program / place a warning in folder
+    if re.search(pattern, ftk_file_text):
+        open('BAD SECTORS FOUND.txt', 'w').close()
+        print('ISSUE WITH PROCESSING, PLEASE VERIFY')
+        logging.info('ISSUE WITH PROCESSING, PLEASE VERIFY')
+        # Create a beep noise to alert DFO 
+        frequency = 2500  # Set Frequency To 2500 Hertz
+        duration = 1000  # Set Duration To 1000 ms == 1 second
+        winsound.Beep(frequency, duration)
+        input()
+        sys.exit()
+    else:  # Carry on if no issues
+        print('Hashes Match -  No issues')
+        logging.info('Hashes Match -  No issues')
+
+# Create a beep noise to alert DFO processing is done
+frequency = 2500  # Set Frequency To 2500 Hertz
+duration = 1000  # Set Duration To 1000 ms == 1 second
+winsound.Beep(frequency, duration)
+
+# E01 HAS BEEN CREATED
+logging.info('** PROCESSING COMPLETED / E01 CREATED AND VERIFIED **')
+
+{% endhighlight %}
