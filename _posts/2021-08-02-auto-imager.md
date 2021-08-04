@@ -327,7 +327,7 @@ print('HPA / DCO not in use -  No issues')
 logging.info('HPA / DCO not in use -  No issues')
 {% endhighlight %}
 
- Compression Check
+### Compression Check
 
 Test
 
@@ -393,6 +393,8 @@ while True:
         print("Waiting for E01 Verification to complete")
         time.sleep(30)
  {% endhighlight %}
+ 
+ 
  
  ### Bad Sector Check & Script End
  
