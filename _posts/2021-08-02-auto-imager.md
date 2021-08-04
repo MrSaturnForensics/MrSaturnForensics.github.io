@@ -428,7 +428,14 @@ logging.info('PROCESSING COMPLETED / E01 CREATED AND VERIFIED')
 
 
 ### Script Results
+Below shows an example run present in the command line!
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/1byt4LF/CAPTURE0.png" alt="CAPTURE0" border="0" /></a> 
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/1zWFmhg/CAPTURE1.png" alt="CAPTURE1" border="0" /></a> <a href="https://ibb.co/TH0VYGq"><img src="https://i.ibb.co/Q6H2pVj/CAPTURE2.png" alt="CAPTURE2" border="0" /></a>
+The following is the output from the script, it sucessfully creates an E01 file, checks for errors, and gives an appropriate filename based on the case reference, exhibit reference, exhibit type, and suffix.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1zWFmhg/CAPTURE1.png" alt="CAPTURE1" border="0" /></a>
+
+Below is an example of contents of the log file for the script, containing all of the input's present in the command line, for logging purposes.
+
+<a href="https://ibb.co/TH0VYGq"><img src="https://i.ibb.co/Q6H2pVj/CAPTURE2.png" alt="CAPTURE2" border="0" /></a>
