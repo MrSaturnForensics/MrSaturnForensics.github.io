@@ -329,7 +329,7 @@ logging.info('HPA / DCO not in use -  No issues')
 
 ### Compression Check
 
-Test
+This section uses **regex** once again, with a search to obtain the size of the device from the **Tableau Imager** Device details .txt, this is initially obtained as a string, and converted into an integer to then compare the value of the integer against anoother. The size then would set a variable value, which will then allow the script to change the compression for the actual image within **FTKImager**, anything being over 250GB being set to a compression of 9.
 
 {% highlight javascript linenos %}
 # Grab the line giving the size of the image from the Tableau log
