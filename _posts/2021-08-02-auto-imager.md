@@ -393,6 +393,7 @@ while True:
         # Else still awaiting for the verification
         print("Waiting for E01 Verification to complete")
         time.sleep(30)
+        
  {% endhighlight %}
  
  ### Bad Sector Check & Script End
