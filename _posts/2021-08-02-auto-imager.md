@@ -364,6 +364,8 @@ This section checks for the completion of the Imaging process, based on the stat
 
 Based on this it can wait for as long as the imaging requires, checking every 60 seconds. I then used the **windsound** module to create a noise through the system sound, this would be used to warn an examiner to turn off the connection to an SSD during the verification phase of the imaging.
 
+_**windsound**_ provides access to the basic sound-playing machinery built into windows.
+
 {% highlight javascript linenos %}
 required_text = 'Image Verification Results:'
 while True:
