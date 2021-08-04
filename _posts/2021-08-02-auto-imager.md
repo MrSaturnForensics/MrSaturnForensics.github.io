@@ -426,6 +426,5 @@ duration = 1000  # Set Duration To 1000 ms == 1 second
 winsound.Beep(frequency, duration)
 
 # E01 HAS BEEN CREATED
-logging.info('** PROCESSING COMPLETED / E01 CREATED AND VERIFIED **')
-
+logging.info('PROCESSING COMPLETED / E01 CREATED AND VERIFIED')
 {% endhighlight %}
