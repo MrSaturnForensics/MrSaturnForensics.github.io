@@ -360,7 +360,9 @@ if exhibit_size > 268435318561:
 
 ### Imaging Completion Check & SSD Check
 
-test
+This section checks for the completion of the Imaging process, based on the state of the contexts of the log .txt created by **FTKImager**, It can determine if the imaging has finished, and if verification has started or finished. 
+
+Based on this it can wait for as long as the imaging requires, checking every 60 seconds. I then used the **windsound** module to create a noise through the system sound, this would be used to warn an examiner to turn off the connection to an SSD during the verification phase of the imaging.
 
 {% highlight javascript linenos %}
 required_text = 'Image Verification Results:'
@@ -394,7 +396,7 @@ while True:
   
 ### Bad Sector Check 
  
- test
+Finally I used **regex** once again to look for the line present in the .txt for an error, if this is the case it will display an error message. If not then once imaging has sucessfully finished a noise will be made to alert the examiner the script has finished.
  
 {% highlight javascript linenos %}
 # String of text to search for / input data
@@ -425,7 +427,6 @@ winsound.Beep(frequency, duration)
 # E01 HAS BEEN CREATED
 logging.info('PROCESSING COMPLETED / E01 CREATED AND VERIFIED')
 {% endhighlight %}
-
 
 ### Script Results
 Below shows an example run present in the command line!
