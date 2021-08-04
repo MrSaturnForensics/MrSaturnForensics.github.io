@@ -428,3 +428,7 @@ logging.info('PROCESSING COMPLETED / E01 CREATED AND VERIFIED')
 
 
 ### Script Results
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1byt4LF/CAPTURE0.png" alt="CAPTURE0" border="0" /></a> 
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1zWFmhg/CAPTURE1.png" alt="CAPTURE1" border="0" /></a> <a href="https://ibb.co/TH0VYGq"><img src="https://i.ibb.co/Q6H2pVj/CAPTURE2.png" alt="CAPTURE2" border="0" /></a>
