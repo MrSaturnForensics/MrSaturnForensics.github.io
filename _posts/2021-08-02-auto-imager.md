@@ -327,3 +327,34 @@ for pattern in hard_drive_patterns:
 print('HPA / DCO not in use -  No issues')
 logging.info('HPA / DCO not in use -  No issues')
 {% endhighlight %}
+
+### Compression Check
+
+Test
+
+{% highlight javascript linenos %}
+# Grab the line giving the size of the image from the Tableau log
+pattern = re.compile("Capacity:")
+for line in open(str(Filenames.Tableau_filepath)):
+    for match in re.finditer(pattern, line):
+        string = line
+
+# Find the relevant bit within the string, and convert to just the data needed
+# Data comes as list, convert to string, then convert to integer
+file_size = re.compile(r"\((.*) bytes\)")
+raw_string = string
+raw_bytes_as_list = (re.findall(file_size, raw_string.replace(",", "")))
+raw_bytes_as_string = raw_bytes_as_list[0]
+raw_bytes_as_int = int(raw_bytes_as_string)
+exhibit_size = 0
+exhibit_size = raw_bytes_as_int
+
+# Define compression value based on size of exhibit
+# If exhibit is less than or equal to 250GB
+if exhibit_size <= 268435318561:
+    exhibit_size = 1
+
+# If exhibit is over 250GB
+if exhibit_size > 268435318561:
+    exhibit_size = 9
+ {% endhighlight %}
