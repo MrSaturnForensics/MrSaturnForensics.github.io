@@ -378,14 +378,12 @@ while True:
     else:
         # What to do if "try" part does not fail, which in this case means that the file exists
         if required_text in ftk_file_text:
-            break
-        
-        # What to do if SSD, break out of verification and warn DFO to disconnect with confirmation
+            break 
+       # What to do if SSD, break out of verification and warn DFO to disconnect with confirmation
         elif pc_type == "S" or pc_type == "s":
             frequency = 2500  # Set Frequency To 2500 Hertz
             duration = 1000  # Set Duration To 1000 ms == 1 second
-            winsound.Beep(frequency, duration)
-            
+            winsound.Beep(frequency, duration)  
             print('SSD IMAGING IS NOW BEING VERIFIED, PLEASE DISCONNECT SSD AND PRESS ENTER')
             logging.info('SSD IMAGING IS NOW BEING VERIFIED, PLEASE DISCONNECT SSD AND PRESS ENTER')
             input()
