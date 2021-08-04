@@ -395,7 +395,6 @@ while True:
  {% endhighlight %}
  
  ### Bad Sector Check & Script End
- ### Compression Check
  
  test
  
