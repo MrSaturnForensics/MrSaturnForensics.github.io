@@ -369,7 +369,6 @@ while True:
         # Try to do something like open a file
         with open(str(Filenames.FTK_filepath_txt)) as file:
             ftk_file_text = file.read()
-    # Except some error
     except FileNotFoundError:
         # What to do if what inside the "try" part fails with this error.
         print("Waiting for E01 Image to be created")
@@ -389,13 +388,10 @@ while True:
             input()
             break
             
-        # Else still awaiting for the verification
         print("Waiting for E01 Verification to complete")
         time.sleep(30)
  {% endhighlight %}
- 
- 
- 
+  
  ### Bad Sector Check & Script End
  
  test
