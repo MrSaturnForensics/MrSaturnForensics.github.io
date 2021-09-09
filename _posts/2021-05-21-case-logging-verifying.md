@@ -161,7 +161,6 @@ _**Math** module provides access to the mathematical functions defined by the C 
 
 {% highlight javascript linenos %}
 def get_worksheet_count(dataframe, chunk_size):
-    """Get the number of worksheets needed to write `dataframe` into it."""
     total_rows = dataframe.shape[0]
     worksheet_count = math.ceil(total_rows / chunk_size)
     return worksheet_count
