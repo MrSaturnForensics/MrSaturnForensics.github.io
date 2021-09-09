@@ -157,7 +157,7 @@ def calculate_col_widths(dataframe):
 
 Using the **math** module, i then created a function which will work out how many worksheets the data may need to be spread over.
 
-_**Math** module provides access to the mathematical functions defined by the C standard.
+_**Math**_ module provides access to the mathematical functions defined by the C standard.
 
 {% highlight javascript linenos %}
 def get_worksheet_count(dataframe, chunk_size):
