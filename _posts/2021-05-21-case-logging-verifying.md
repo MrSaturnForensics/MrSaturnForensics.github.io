@@ -157,12 +157,26 @@ def calculate_col_widths(dataframe):
 
 Using the **math** module, i then created a function which will work out how many worksheets the data may need to be spread over.
 
+_**Math** module provides access to the mathematical functions defined by the C standard.
+
 {% highlight javascript linenos %}
 def get_worksheet_count(dataframe, chunk_size):
     """Get the number of worksheets needed to write `dataframe` into it."""
     total_rows = dataframe.shape[0]
     worksheet_count = math.ceil(total_rows / chunk_size)
     return worksheet_count
+{% endhighlight %}
+
+I then created a function which would yield the dataframe view with `EXCEL_ROW_LIMIT` number of rows so that the amount will always fit one excel sheet.
+
+{% highlight javascript linenos %}
+def split_dataframe(dataframe, chunk_size) -> pd.DataFrame:
+    worksheet_count = get_worksheet_count(dataframe, chunk_size)
+    for sheet_i in range(worksheet_count):
+        start_row = sheet_i * chunk_size
+        end_row = (sheet_i + 1) * chunk_size - sheet_i
+        chunk = dataframe.iloc[start_row:end_row]
+        yield chunk
 {% endhighlight %}
 
 As shown below, the script when running locally is able to reach **12,180** files processed a second!
