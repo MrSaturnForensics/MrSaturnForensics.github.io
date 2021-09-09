@@ -179,7 +179,88 @@ def split_dataframe(dataframe, chunk_size) -> pd.DataFrame:
 {% endhighlight %}
 
 ### Converting the dataframe to Excel
+{% highlight javascript linenos %}
+ef dataframe_to_excel(dataframe,
+                       filename=EXCEL_FILENAME,
+                       sheet_name_template='{n}-Case Folder Log',
+                       topleft_corner=(1, 1)):
+    
+    # Mark all filenames that start with a `=` as a string formula like `="file"`
+    dataframe['Filename'] = dataframe.loc[:, 'Filename'].apply(lambda s: f'="{s}"' if s.startswith('=') else s)
+    
+    """
+    Write given DataFrame to Excel file using pyexelerate.
 
+    Coordinates for dataframe in excel:
+    topleft_corner=(y, x)
+    X and Y are non-zero indexed, so first top left cell is (1, 1)
+    """
+    workbook = Workbook()
+
+    col_headers = dataframe.columns.tolist()
+    col_widths = calculate_col_widths(dataframe)
+    even_row_style = Color(226, 239, 218, 255)
+    col_header_style = Style(
+        font=Font(bold=True),
+        fill=Fill(background=Color(112, 173, 71)),
+        alignment=Alignment(horizontal='center', vertical='center')
+    )
+
+    # column headers coordinates
+    header_row_left = (topleft_corner[0], topleft_corner[1])
+    header_row_right = (topleft_corner[0], topleft_corner[1] + len(col_headers))
+
+    # Row and column to start writing the dataframe to (in the worksheet)
+    start_row = topleft_corner[0] + 1  # +1 to overwrite header row
+    start_col = topleft_corner[1]
+
+    # Chunk size is excel row limit minus header row index
+    chunk_size = EXCEL_ROW_LIMIT - start_row
+
+    dataframe_chunks = split_dataframe(dataframe, chunk_size)
+    worksheet_count = get_worksheet_count(dataframe, chunk_size)
+
+    # Write the data to sheets
+    logging.info(f"A total of {worksheet_count} worksheets will be written")
+    logging.info("Starting to write data...")
+    for worksheet_i, chunk in enumerate(dataframe_chunks, 1):
+        chunk: pd.DataFrame
+
+        sheet_name = sheet_name_template.format(n=worksheet_i)
+        worksheet = workbook.new_sheet(sheet_name=sheet_name)
+        # consistently
+        col_count = chunk.shape[1]
+        row_count = chunk.shape[0]
+
+        # Make hyperlinks out of first `EXCEL_HYPERLINK_LIMIT` full paths
+        chunk.update(chunk.loc[:HYPERLINK_LIMIT, 'Full Path'].apply(to_excel_hyperlink, 1))
+
+        # Write dataframe column headers to current worksheet
+        worksheet.range(header_row_left, header_row_right).value = [[*col_headers]]
+        # Set column width and column header style
+        for column_i, column_name in enumerate(dataframe.columns, start_col):
+            worksheet.set_col_style(column_i, Style(size=col_widths[column_name]))
+            worksheet.set_cell_style(topleft_corner[1], column_i, col_header_style)
+
+        # Write actual dataframe_chunk data to worksheet
+        logging.info(f"Writing {row_count} rows of data to sheet -> {sheet_name}")
+        values_to_write = chunk.values.tolist()
+        data_top_left = (start_row, start_col)
+        data_bottom_right = (start_row + row_count, start_col + col_count)
+        worksheet.range(data_top_left, data_bottom_right).value = values_to_write
+
+        # Enable auto filter + other styling to the worksheet
+        worksheet.auto_filter = True
+        # Takes some extra time, makes it look more pretty
+        for row_i in range(start_row, start_row + row_count, 2):
+            row_bounds = (row_i, start_col), (row_i, start_col - 1 + len(col_headers))
+            worksheet.range(*row_bounds).style.fill.background = even_row_style
+
+    logging.info("Saving file... Please wait!")
+    path = os.path.abspath(filename)
+    workbook.save(path)
+    logging.info(f"Done! File save to -> {path}")
+{% endhighlight %}
 
 
 As shown below, the script when running locally is able to reach **12,180** files processed a second!
