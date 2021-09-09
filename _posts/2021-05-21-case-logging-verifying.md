@@ -179,6 +179,11 @@ def split_dataframe(dataframe, chunk_size) -> pd.DataFrame:
 {% endhighlight %}
 
 ### Converting the dataframe to Excel
+
+The following is then the majority of all the work coming together! First off the filename is built, and a workaround for any filenames beginning with '=' has been used, as if not then excel will assume this represents the beginning of a formula. This then writes all of the data stored in the dataframe to an excel sheet using the **pyexelrate** module. This also provides alot of the formatting and allocation of how the data is presented. 
+
+_**pyexelrate**_ is a module for writing Excel-compatible XLSX spreadsheet files, with an emphasis on speed.
+
 {% highlight javascript linenos %}
 ef dataframe_to_excel(dataframe,
                        filename=EXCEL_FILENAME,
