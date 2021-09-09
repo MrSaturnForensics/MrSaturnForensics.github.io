@@ -166,7 +166,7 @@ def get_worksheet_count(dataframe, chunk_size):
     return worksheet_count
 {% endhighlight %}
 
-I then created a function which would yield the dataframe view with `EXCEL_ROW_LIMIT` number of rows so that the amount will always fit one excel sheet.
+I then created a function which would yield the dataframe view with **EXCEL_ROW_LIMIT** number of rows so that the amount will always fit one excel sheet.
 
 {% highlight javascript linenos %}
 def split_dataframe(dataframe, chunk_size) -> pd.DataFrame:
