@@ -274,3 +274,10 @@ The script when running locally is able to reach **12,180** files processed a se
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/txyhQSG/ss-2021-07-23-at-09-08-41.png" alt="ss-2021-07-23-at-09-08-41" border="0" /></a>
 
+This then creates a **.xlsx** file, made up of the user pc, date and time.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/f8P7yq1/excel.png" alt="excel" border="0" /></a>
+
+This is then the final format of the log file, allowing someone to easily search through all files and see files from the root of where it was ran.
+
+<a href="https://ibb.co/x72F0ww"><img src="https://i.ibb.co/P6rDnJJ/excel-view.png" alt="excel-view" border="0" /></a>
