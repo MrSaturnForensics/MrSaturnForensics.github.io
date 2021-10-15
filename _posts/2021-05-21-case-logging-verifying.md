@@ -281,3 +281,15 @@ This then creates a **.xlsx** file, made up of the user pc, date and time.
 This is then the final format of the log file, allowing someone to easily search through all files and see files from the root of where it was ran.
 
 <a href="https://ibb.co/x72F0ww"><img src="https://i.ibb.co/P6rDnJJ/excel-view.png" alt="excel-view" border="0" /></a>
+
+
+### Case Verifying Script Breakdown
+
+### The Code
+
+Initially I created a function which would highlight changes between the two dataframes, showing the original and updated value, this uses the **groupby.apply** function within **Pandas**.
+
+{% highlight javascript linenos %}
+def report_diff(x):
+    return x[0] if x[0] == x[1] or pd.isna(x).all() else f'{x[0]} ---> {x[1]}'
+{% endhighlight %}
