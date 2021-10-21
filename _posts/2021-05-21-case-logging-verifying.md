@@ -302,6 +302,8 @@ def strip(x):
     return x.strip() if isinstance(x, str) else x
 {% endhighlight %}
 
+The following then identifies the differences between the two dataframes i.e what is added, and what is removed, this is then merged into a single cell using the previously defined **report_dif** function.
+
 {% highlight javascript linenos %}
 def diff_pd(old_df, new_df, idx_col):
     """
@@ -343,7 +345,7 @@ def diff_pd(old_df, new_df, idx_col):
     new_common = new_df.loc[common_keys, common_columns].applymap(strip)
     old_common = old_df.loc[common_keys, common_columns].applymap(strip)
     # Get the changed rows keys by dropping identical rows
-    # (indexes are ignored, so we'll reset them)
+    # (indexes are ignored, so reset them)
     common_data = pd.concat(
         [old_common.reset_index(), new_common.reset_index()], sort=True
     )
