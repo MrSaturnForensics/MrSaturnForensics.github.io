@@ -369,3 +369,18 @@ def diff_pd(old_df, new_df, idx_col):
 
     return out_data
     {% endhighlight %}
+
+{% highlight javascript linenos %}
+def read_excel(path):
+    workbook = openpyxl.load_workbook(path)
+    dfs = []
+    for sheet in workbook.worksheets:
+        data = sheet.values
+        cols = next(data)
+        df = pd.DataFrame.from_records(data, columns=cols)
+        # Remove excel hyperlink formulas
+        df['Full Path'] = df.loc[:, 'Full Path'].apply(lambda s: s[12:-2] if s.startswith('=HYPERLINK("') else s)
+        dfs.append(df)
+    final = pd.concat(dfs)
+    return final
+    {% endhighlight %}
