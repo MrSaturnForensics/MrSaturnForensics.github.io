@@ -302,7 +302,7 @@ def strip(x):
     return x.strip() if isinstance(x, str) else x
 {% endhighlight %}
 
-The following then identifies the differences between the two dataframes i.e what is added, and what is removed, this is then merged into a single cell using the previously defined **report_dif** function.
+The following then identifies the differences between the two dataframes i.e what is added, and what is removed, this is then merged into a single cell using the previously defined **report_dif** function, this is used for the final result spreadsheet.
 
 {% highlight javascript linenos %}
 def diff_pd(old_df, new_df, idx_col):
@@ -370,6 +370,8 @@ def diff_pd(old_df, new_df, idx_col):
     return out_data
     {% endhighlight %}
 
+The following then reads the contents from the previously generated sheets and stores this within a dataframe allowing it to be compared.
+
 {% highlight javascript linenos %}
 def read_excel(path):
     workbook = openpyxl.load_workbook(path)
@@ -384,3 +386,20 @@ def read_excel(path):
     final = pd.concat(dfs)
     return final
     {% endhighlight %}
+
+This section will then compare both dataframes, and identity any possible differences, if the same counts are calculated, the script exits however if a difference is found a final spreadsheet is generated showing the differences. 
+
+{% highlight javascript linenos %}
+def compare_excel(new_file, old_file, out_path, index_col_name):
+    new_df = read_excel(new_file)
+    old_df = read_excel(old_file)
+
+    diff = diff_pd(old_df, new_df, index_col_name)
+    if diff:
+        with pd.ExcelWriter(out_path) as writer:
+            for sname, data in diff.items():
+                data.to_excel(writer, sheet_name=sname, index=False)
+        print(f"Differences saved in {out_path}")
+    else:
+        print("No differences spotted")
+        {% endhighlight %}
