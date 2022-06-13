@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Case Logging & Case Verifying Script **WIP**
+title: Case Logging & Case Verifying Script
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/python.png
 share-img: /assets/img/computer-screen-monitor-text.jpg
