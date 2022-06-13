@@ -5,10 +5,9 @@ title: About me
 ---
 ### My Background
 
-I'm Chris, a digital forensic investigator who works for law enforcement within the UK. 
+I'm Chris, a digital forensic investigator with 5+ years in Digital Forensics & 1 year in eDiscovery, both within the public, goverment and private sector. 
 
-I have worked in digital forensics for 3+ years, both within the public and private sector. I'm interested in exploring what is possible to achieve with Research and Development capabilities with programming, password cracking and reverse engineering.
-
+I'm interested in exploring what is possible to achieve with Research and Development capabilities with programming, password cracking and reverse engineering.
 
 ### Contact Me
 
