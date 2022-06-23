@@ -4,7 +4,7 @@ title: Nuix Irregular Item Perl Script
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/nuix-logo-grey-1024x566-1702408471.PNG
 share-img: /assets/img/computer-screen-monitor-text.jpg
-tags: [NUIX, Scripting, ]
+tags: [NUIX, Scripting, Perl ]
 ---
 
 Creating a case file is something done on a very regular basis with Digital Forensics, I wondered how easily this process could be automated and streamlined, so I had a go at writing a script for the entire process!
