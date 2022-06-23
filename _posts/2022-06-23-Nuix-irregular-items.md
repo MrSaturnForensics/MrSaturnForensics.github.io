@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Nuix Irregular Item Perl Script
+title: Nuix Irregular Item Script
 cover-img: /assets/img/computer-screen-monitor-text.jpg
 thumbnail-img: /assets/img/nuix-logo-grey-1024x566-1702408471.PNG
 share-img: /assets/img/computer-screen-monitor-text.jpg
